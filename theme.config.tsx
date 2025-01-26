@@ -13,11 +13,8 @@ import FooterMenu from './components/FooterMenu'
 const config: DocsThemeConfig = {
   logo: <Logo />,
   logoLink: '/',
-  project: {
-    link: 'https://github.com/danny-avila/LibreChat',
-  },
   chat: {
-    link: 'https://discord.librechat.ai',
+    link: 'https://aichat.mylinks.com.vn/',
   },
   search: {
     placeholder: 'Tìm kiếm...',
@@ -46,7 +43,8 @@ const config: DocsThemeConfig = {
   head: () => {
     const { asPath, defaultLocale, locale } = useRouter()
     const { frontMatter, title: pageTitle } = useConfig()
-    const url = 'https://librechat.ai' + (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
+    const url =
+      'https://site.mylinks.com.vn' + (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
 
     const description = frontMatter.description ?? ''
 
@@ -62,10 +60,12 @@ const config: DocsThemeConfig = {
           : '/images/socialcards/default-image.png'
 
     const image = frontMatter.ogImage
-      ? 'https://www.librechat.ai' + frontMatter.ogImage // Use frontmatter image if available
+      ? 'https://www.site.mylinks.com.vn' + frontMatter.ogImage // Use frontmatter image if available
       : defaultImage // Use default image based on path if frontmatter image is not available
 
-    const video = frontMatter.ogVideo ? 'https://www.librechat.ai' + frontMatter.ogVideo : null
+    const video = frontMatter.ogVideo
+      ? 'https://www.site.mylinks.com.vn' + frontMatter.ogVideo
+      : null
 
     return (
       <>
@@ -80,8 +80,8 @@ const config: DocsThemeConfig = {
         <meta property="og:image" content={image} />
         <meta property="twitter:image" content={image} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site:domain" content="librechat.ai" />
-        <meta name="twitter:url" content="https://librechat.ai" />
+        <meta name="twitter:site:domain" content="site.mylinks.com.vn" />
+        <meta name="twitter:url" content="https://site.mylinks.com.vn" />
         <style
           dangerouslySetInnerHTML={{
             __html: `html { --font-geist-sans: ${GeistSans.style.fontFamily}; }`,

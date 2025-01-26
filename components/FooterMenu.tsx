@@ -22,34 +22,30 @@ const menuItems: {
         href: '/about',
       },
       { name: 'Liên hệ chúng tôi', href: '/about#contact-us' },
-      {
-        name: 'Tính năng',
-        href: '/docs/features',
-      },
     ],
   },
   {
-    heading: 'Tài nguyên',
+    heading: 'AI & Ứng dụng',
     items: [
       {
-        name: 'API Trình thông dịch mã',
-        href: 'https://code.librechat.ai/pricing',
+        name: 'AI API Keys',
+        href: 'https://api.mylinks.com.vn/detail/',
       },
       {
-        name: 'Nhật ký thay đổi',
-        href: '/changelog',
+        name: 'Ứng dụng AI-Chat',
+        href: 'https://aichat.mylinks.com.vn/',
       },
       {
-        name: 'Lộ trình',
-        href: '/blog/2024-02-19_2024_roadmap',
+        name: 'LobeChat',
+        href: 'https://chat.mylinks.com.vn/',
       },
       {
-        name: 'Demo',
-        href: 'https://chat.librechat.ai/',
+        name: 'NextChat',
+        href: 'https://next.mylinks.com.vn/',
       },
       {
-        name: 'Trạng thái',
-        href: 'https://status.librechat.ai/',
+        name: 'AI Chrome Extension',
+        href: '#',
       },
     ],
   },
@@ -72,10 +68,7 @@ const menuItems: {
   },
   {
     heading: 'Blog',
-    items: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Tác giả Blog', href: '/authors' },
-    ],
+    items: [{ name: 'Blog', href: '/blog' }],
   },
   {
     heading: 'Bản tin',
@@ -91,7 +84,7 @@ const menuItems: {
     ],
   },
   {
-    heading: 'Pháp lý',
+    heading: 'Chính sách',
     items: [
       {
         name: 'Điều khoản dịch vụ',

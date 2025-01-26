@@ -1,8 +1,7 @@
 export default {
   index: {
     type: 'page',
-    title: 'API Mylinks',
-    display: 'hidden',
+    title: '✨ Trang chủ',
     theme: {
       layout: 'raw',
     },
@@ -14,23 +13,22 @@ export default {
       timestamp: false,
     },
   },
-  changelog: {
+  crs: {
     type: 'page',
-    title: 'Giới thiệu',
-    display: 'hidden',
+    title: 'Giữ chân khách hàng',
     theme: {
-      layout: 'full',
+      timestamp: false,
     },
   },
-  code_interpreter: {
+
+  ai_services: {
+    title: 'AI Key & Ứng dụng AI',
     type: 'page',
-    title: '✨ API Mylinks.AI',
-    href: 'https://api.mylinks.com.vn',
+    theme: {
+      timestamp: false,
+    },
   },
-  docs: {
-    type: 'page',
-    title: 'Tài liệu',
-  },
+
   blog: {
     title: 'Blog',
     type: 'page',
@@ -38,77 +36,20 @@ export default {
       layout: 'full',
     },
   },
-  authors: {
-    title: 'Tác giả',
-    type: 'folder',
-    theme: {
-      toc: false,
-      sidebar: false,
-      pagination: true,
-      layout: 'default',
-      breadcrumb: false,
-      timestamp: false,
-    },
-  },
-  // pricing: {
-  //   type: 'page',
-  //   title: 'API Mylinks',
-  //   href: 'https://api.mylinks.com.vn/',
-  //   // display: 'hidden',
-  // },
 
   pricing: {
     title: 'Bảng giá',
+    display: 'hidden',
     type: 'page',
     theme: {
       layout: 'full',
     },
   },
-  tos: {
-    title: 'Điều khoản dịch vụ',
+  contact_us: {
+    title: 'Liên hệ',
     type: 'page',
-    display: 'hidden',
-  },
-  privacy: {
-    title: 'Chính sách bảo mật',
-    type: 'page',
-    display: 'hidden',
-  },
-  cookie: {
-    title: 'Chính sách cookie',
-    type: 'page',
-    display: 'hidden',
-  },
-
-  features: {
-    title: 'Tính năng',
-    type: 'page',
-    display: 'hidden',
     theme: {
       timestamp: false,
     },
-  },
-  subscribe: {
-    title: 'Đăng ký',
-    type: 'page',
-    display: 'hidden',
-  },
-  unsubscribe: {
-    title: 'Hủy đăng ký',
-    type: 'page',
-    display: 'hidden',
-  },
-  '404': {
-    type: 'page',
-    theme: {
-      typesetting: 'article',
-      timestamp: false,
-    },
-  },
-  toolkit: 'Bộ công cụ',
-  README: {
-    title: 'readme.md',
-    type: 'page',
-    display: 'hidden',
   },
 }
