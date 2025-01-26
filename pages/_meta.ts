@@ -50,16 +50,15 @@ export default {
       timestamp: false,
     },
   },
-  demo: {
-    type: 'page',
-    title: 'API Mylinks',
-    href: 'https://api.mylinks.com.vn/',
-    // display: 'hidden',
-  },
+  // pricing: {
+  //   type: 'page',
+  //   title: 'API Mylinks',
+  //   href: 'https://api.mylinks.com.vn/',
+  //   // display: 'hidden',
+  // },
 
   pricing: {
-    title: 'Giá cả',
-    display: 'hidden',
+    title: 'Bảng giá',
     type: 'page',
     theme: {
       layout: 'full',
