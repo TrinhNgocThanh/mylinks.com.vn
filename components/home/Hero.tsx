@@ -83,7 +83,7 @@ const HeroLinks = React.memo(() => (
         as="button"
         className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
       >
-        <span>Dùng thử miễn phí</span>
+        <span>Giải pháp Mobile App : Giữ chân khách hàng</span>
       </HoverBorderGradient>
     </div>
     <CardContainer className="inter-var">
