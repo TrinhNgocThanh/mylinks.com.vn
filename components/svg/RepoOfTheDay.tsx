@@ -24,7 +24,7 @@ function RepoOfTheDay() {
         x="6"
         y="10"
       >
-        <div>GITHUB TRENDING</div>
+        <div>FREE AI CHAT</div>
       </foreignObject>
       <svg
         height="45"
@@ -54,7 +54,7 @@ function RepoOfTheDay() {
         x="64"
         y="24"
       >
-        <div>#1 Repository Of The Day</div>
+        <div>#1 API Key Provider</div>
       </foreignObject>
       <foreignObject
         height="36"
