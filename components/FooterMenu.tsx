@@ -54,7 +54,7 @@ const menuItems: {
     ],
   },
   {
-    heading: 'Tài liệu',
+    heading: 'Giải pháp',
     items: [
       {
         name: 'Bắt đầu',

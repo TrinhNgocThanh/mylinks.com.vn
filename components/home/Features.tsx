@@ -73,7 +73,7 @@ const features: Feature[] = [
     description:
       'Thực thi mã trong nhiều ngôn ngữ một cách an toàn qua API mà không cần thiết lập - Python, JavaScript, TypeScript, Go và nhiều hơn nữa',
     href: '/docs/features/code_interpreter',
-    cta: 'Bắt đầu mã hóa!',
+    cta: 'Xem chi tiết!',
     background: (
       <BentoBgImage imgLight={CodeInterpreter} imgDark={CodeInterpreter} alt="Artifacts" />
     ),
@@ -82,7 +82,8 @@ const features: Feature[] = [
   {
     Icon: BrainCog,
     name: 'Khai thác tiềm năng khách hàng',
-    description: 'Lựa chọn mô hình AI bao gồm Anthropic, AWS, OpenAI, Azure và nhiều hơn nữa',
+    description:
+      'Bằng cách phát hiện những lợi thế đặc thù của doanh nqhiệp và kết hợp với giải pháp ứng dụng phù hợp trong kỷ nguyên AI và lấy khách hàng làm trọng tâm',
     href: '/docs/configuration/pre_configured_ai',
     cta: 'Chọn bộ não của bạn!',
     background: null,
@@ -109,8 +110,7 @@ const features: Feature[] = [
   {
     Icon: GitFork,
     name: 'Dịch vụ triển khai cao cấp',
-    description:
-      'Chia nhỏ tin nhắn để tạo nhiều luồng hội thoại nhằm kiểm soát ngữ cảnh tốt hơn',
+    description: 'Chia nhỏ tin nhắn để tạo nhiều luồng hội thoại nhằm kiểm soát ngữ cảnh tốt hơn',
     href: '/docs/features/fork',
     cta: 'Phân nhánh!',
     background: null,
@@ -131,14 +131,14 @@ export default function Features() {
   return (
     <HomeSection>
       <Header
-      title="Mở khóa tiềm năng"
-      description="Khám phá các tính năng độc đáo và mạnh mẽ của chúng tôi"
-      button={{ href: '/docs', text: 'Khám phá tài liệu' }}
+        title="Mở khóa tiềm năng"
+        description="Tiềm năng sẵn có trong mọi doanh nghiệp đó là khách hàng hiện hữu của họ. Khai thác tiềm năng này với giải pháp giữ chân khách hàng ViVi của chúng tôi."
+        button={{ href: '/docs', text: 'Xem chi tiết' }}
       />
       <BentoGrid>
-      {features.map((feature) => (
-        <BentoCard key={feature.name} {...feature} />
-      ))}
+        {features.map((feature) => (
+          <BentoCard key={feature.name} {...feature} />
+        ))}
       </BentoGrid>
     </HomeSection>
   )
