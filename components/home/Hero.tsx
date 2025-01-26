@@ -13,13 +13,13 @@ import DemoImageLight from './img/demo_light.png'
 import DemoImageDark from './img/demo_dark.png'
 
 const HERO_TITLE = {
-  firstPart: 'Unify',
+  firstPart: 'Customer',
   highlight: 'AI',
-  lastPart: 'Power',
+  lastPart: 'Retention',
 }
 const HERO_DESCRIPTION =
-  ' is the ultimate open-source app for all your AI conversations, fully customizable and compatible with any AI provider — all in one sleek interface'
-const DEMO_LINK = 'https://chat.librechat.ai/'
+  ' ,chúng tôi là một công ty công nghệ trong thời đại Trí tuệ nhân tạo, với sứ mệnh mang đến cho bạn giải pháp kinh doanh bền vững (Giữ chân khách hàng) và cải tiến năng suất bằng các ứng dụng AI'
+const DEMO_LINK = 'https://chat.mylinks.com.vn/'
 // const GITHUB_LINK = 'https://github.com/danny-avila/librechat'
 // const GITHUB_STARS_IMG =
 //   'https://img.shields.io/github/stars/danny-avila/librechat?label=librechat&style=social'
@@ -47,7 +47,7 @@ const HeroTitle = React.memo(() => (
 const HeroDescription = React.memo(() => (
   <span className="mt-4 text-primary/70 text-base md:text-lg lg:text-2xl tracking-wide text-center p-2 lg:p-0">
     <span className="bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
-      LibreChat
+      MyLinks
     </span>
     {HERO_DESCRIPTION}
     <div className="flex justify-center mt-4">
@@ -83,7 +83,7 @@ const HeroLinks = React.memo(() => (
         as="button"
         className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
       >
-        <span>Try demo</span>
+        <span>Dùng thử miễn phí</span>
       </HoverBorderGradient>
     </div>
     <CardContainer className="inter-var">

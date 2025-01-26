@@ -15,32 +15,32 @@ const menuItems: {
   items: { name: string; href: string }[]
 }[] = [
   {
-    heading: 'About',
+    heading: 'Giới thiệu',
     items: [
       {
-        name: 'About',
+        name: 'Giới thiệu',
         href: '/about',
       },
-      { name: 'Contact Us', href: '/about#contact-us' },
+      { name: 'Liên hệ chúng tôi', href: '/about#contact-us' },
       {
-        name: 'Features',
+        name: 'Tính năng',
         href: '/docs/features',
       },
     ],
   },
   {
-    heading: 'Resources',
+    heading: 'Tài nguyên',
     items: [
       {
-        name: 'Code Interpreter API',
+        name: 'API Trình thông dịch mã',
         href: 'https://code.librechat.ai/pricing',
       },
       {
-        name: 'Changelog',
+        name: 'Nhật ký thay đổi',
         href: '/changelog',
       },
       {
-        name: 'Roadmap',
+        name: 'Lộ trình',
         href: '/blog/2024-02-19_2024_roadmap',
       },
       {
@@ -48,24 +48,24 @@ const menuItems: {
         href: 'https://chat.librechat.ai/',
       },
       {
-        name: 'Status',
+        name: 'Trạng thái',
         href: 'https://status.librechat.ai/',
       },
     ],
   },
   {
-    heading: 'Documentation',
+    heading: 'Tài liệu',
     items: [
       {
-        name: 'Get Started',
+        name: 'Bắt đầu',
         href: '/docs',
       },
       {
-        name: 'Local Install',
+        name: 'Cài đặt cục bộ',
         href: '/docs/local',
       },
       {
-        name: 'Remote Install',
+        name: 'Cài đặt từ xa',
         href: '/docs/remote',
       },
     ],
@@ -74,35 +74,35 @@ const menuItems: {
     heading: 'Blog',
     items: [
       { name: 'Blog', href: '/blog' },
-      { name: 'Blog Authors', href: '/authors' },
+      { name: 'Tác giả Blog', href: '/authors' },
     ],
   },
   {
-    heading: 'Newsletter',
+    heading: 'Bản tin',
     items: [
       {
-        name: 'Subscribe',
+        name: 'Đăng ký',
         href: '/subscribe',
       },
       {
-        name: 'Unsubscribe',
+        name: 'Hủy đăng ký',
         href: '/unsubscribe',
       },
     ],
   },
   {
-    heading: 'Legal',
+    heading: 'Pháp lý',
     items: [
       {
-        name: 'Terms of services',
+        name: 'Điều khoản dịch vụ',
         href: '/tos',
       },
       {
-        name: 'Privacy policy',
+        name: 'Chính sách bảo mật',
         href: '/privacy',
       },
       {
-        name: 'Cookie policy',
+        name: 'Chính sách cookie',
         href: '/cookie',
       },
     ],

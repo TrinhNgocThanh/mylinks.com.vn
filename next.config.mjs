@@ -92,12 +92,6 @@ const nextraConfig = withNextra({
         port: '',
         pathname: '/**',
       },
-      {
-        protocol: 'https',
-        hostname: 'firebasestorage.googleapis.com',
-        port: '',
-        pathname: '/**',
-      },
     ],
   },
   headers() {

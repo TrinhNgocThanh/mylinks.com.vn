@@ -30,7 +30,7 @@ const stats = [
 export const Usage = () => (
   <HomeSection className="pt-2 sm:pt-2 lg:pt-2 xl:pt-2">
     <div className="py-14">
-      <h2 className="text-center text-lg font-semibold leading-8 mb-8">Usage statistics</h2>
+      <h2 className="text-center text-lg font-semibold leading-8 mb-8">Những con số thống kê</h2>
       <div className="flex flex-col gap-8">
         <div className="relative">
           <div className="flex flex-wrap xl:flex-nowrap justify-between">

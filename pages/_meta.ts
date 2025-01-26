@@ -1,20 +1,35 @@
 export default {
   index: {
     type: 'page',
-    title: 'LibreChat',
+    title: 'API Mylinks',
     display: 'hidden',
     theme: {
       layout: 'raw',
     },
   },
+  about: {
+    title: 'Về chúng tôi',
+    type: 'page',
+    theme: {
+      timestamp: false,
+    },
+  },
+  changelog: {
+    type: 'page',
+    title: 'Giới thiệu',
+    display: 'hidden',
+    theme: {
+      layout: 'full',
+    },
+  },
   code_interpreter: {
     type: 'page',
-    title: '✨ Code Interpreter',
-    href: 'https://code.librechat.ai/pricing',
+    title: '✨ API Mylinks.AI',
+    href: 'https://api.mylinks.com.vn',
   },
   docs: {
     type: 'page',
-    title: 'Docs',
+    title: 'Tài liệu',
   },
   blog: {
     title: 'Blog',
@@ -24,7 +39,7 @@ export default {
     },
   },
   authors: {
-    title: 'Authors',
+    title: 'Tác giả',
     type: 'folder',
     theme: {
       toc: false,
@@ -37,19 +52,13 @@ export default {
   },
   demo: {
     type: 'page',
-    title: 'Demo',
-    href: 'https://chat.librechat.ai/',
+    title: 'API Mylinks',
+    href: 'https://api.mylinks.com.vn/',
     // display: 'hidden',
   },
-  changelog: {
-    type: 'page',
-    title: 'Changelog',
-    theme: {
-      layout: 'full',
-    },
-  },
+
   pricing: {
-    title: 'Pricing',
+    title: 'Giá cả',
     display: 'hidden',
     type: 'page',
     theme: {
@@ -57,30 +66,23 @@ export default {
     },
   },
   tos: {
-    title: 'Terms of Service',
+    title: 'Điều khoản dịch vụ',
     type: 'page',
     display: 'hidden',
   },
   privacy: {
-    title: 'Privacy Policy',
+    title: 'Chính sách bảo mật',
     type: 'page',
     display: 'hidden',
   },
   cookie: {
-    title: 'Cookie Policy',
+    title: 'Chính sách cookie',
     type: 'page',
     display: 'hidden',
   },
-  about: {
-    title: 'About us',
-    type: 'page',
-    display: 'hidden',
-    theme: {
-      timestamp: false,
-    },
-  },
+
   features: {
-    title: 'Features',
+    title: 'Tính năng',
     type: 'page',
     display: 'hidden',
     theme: {
@@ -88,12 +90,12 @@ export default {
     },
   },
   subscribe: {
-    title: 'Subscribe',
+    title: 'Đăng ký',
     type: 'page',
     display: 'hidden',
   },
   unsubscribe: {
-    title: 'Unsubscribe',
+    title: 'Hủy đăng ký',
     type: 'page',
     display: 'hidden',
   },
@@ -104,7 +106,7 @@ export default {
       timestamp: false,
     },
   },
-  toolkit: 'ToolKit',
+  toolkit: 'Bộ công cụ',
   README: {
     title: 'readme.md',
     type: 'page',

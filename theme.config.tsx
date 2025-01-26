@@ -20,7 +20,7 @@ const config: DocsThemeConfig = {
     link: 'https://discord.librechat.ai',
   },
   search: {
-    placeholder: 'Search...',
+    placeholder: 'Tìm kiếm...',
   },
   navbar: {
     extraContent: () => {
@@ -38,7 +38,7 @@ const config: DocsThemeConfig = {
   toc: {
     backToTop: true,
   },
-  docsRepositoryBase: 'https://github.com/LibreChat-AI/librechat.ai/tree/main',
+  docsRepositoryBase: 'https://github.com/TrinhNgocThanh/mylinks.com.vn/tree/main',
   footer: {
     content: <FooterMenu />,
   },

@@ -18,7 +18,7 @@ export function Logo() {
         }}
       >
         <Image src="/librechat_alt.svg" alt="LibreChat Alt Logo" width={30} height={30} />
-        <span className="ml-2 text-lg font-bold text-gray-600 dark:text-gray-300">LibreChat</span>
+        <span className="ml-2 text-lg font-bold text-gray-600 dark:text-gray-300">MyLinks</span>
         {/* CSS for hover effect */}
         <style jsx>{`
           div {

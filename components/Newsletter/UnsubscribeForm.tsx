@@ -13,7 +13,7 @@ const UnsubscribeForm = () => {
     e.preventDefault()
 
     if (!validator.isEmail(email)) {
-      toast.error('Invalid email format')
+      toast.error('Định dạng email không hợp lệ')
       return
     }
 
@@ -29,15 +29,15 @@ const UnsubscribeForm = () => {
       })
 
       if (response.status === 200) {
-        toast.success('Unsubscription successful')
+        toast.success('Hủy đăng ký thành công')
         setEmail('')
       } else if (response.status === 404) {
-        toast.error('Subscriber not found')
+        toast.error('Không tìm thấy người đăng ký')
       } else {
-        toast.error('Unsubscription failed')
+        toast.error('Hủy đăng ký thất bại')
       }
     } catch {
-      toast.error('Unsubscription failed')
+      toast.error('Hủy đăng ký thất bại')
     } finally {
       setIsLoading(false)
     }
@@ -48,11 +48,11 @@ const UnsubscribeForm = () => {
       <br />
       <Toaster position="bottom-center" reverseOrder={false} />
       <div className={style[`form-wrapper`]}>
-        <h2 className={style[`form-title`]}>Unsubscribe From Our Newsletter</h2>
+        <h2 className={style[`form-title`]}>Hủy đăng ký nhận bản tin của chúng tôi</h2>
         <form onSubmit={handleSubmit} className={style[`form-container`]}>
           <input
             type="email"
-            placeholder={isDevelopment ? 'Coming soon...' : 'Enter your email'}
+            placeholder={isDevelopment ? 'Sắp ra mắt...' : 'Nhập email của bạn'}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className={style[`email-input`]}
@@ -63,7 +63,7 @@ const UnsubscribeForm = () => {
             className={style[`subscribe-button`]}
             disabled={isLoading || isDevelopment}
           >
-            {isLoading ? 'Unsubscribing...' : 'Unsubscribe'}
+            {isLoading ? 'Đang hủy đăng ký...' : 'Hủy đăng ký'}
           </button>
         </form>
       </div>

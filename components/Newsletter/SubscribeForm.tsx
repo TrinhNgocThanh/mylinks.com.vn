@@ -47,11 +47,11 @@ const SubscribeForm = () => {
     <div className={style.container}>
       <Toaster position="bottom-center" reverseOrder={false} />
       <div className={style[`form-wrapper`]}>
-        <h2 className={style[`form-title`]}>Subscribe to Our Newsletter</h2>
+        <h2 className={style[`form-title`]}>Đăng ký nhận bản tin của chúng tôi</h2>
         <form onSubmit={handleSubmit} className={style[`form-container`]}>
           <input
             type="email"
-            placeholder={isDevelopment ? 'Coming soon...' : 'Enter your email'}
+            placeholder={isDevelopment ? 'Sắp ra mắt...' : 'Nhập email của bạn'}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className={style[`email-input`]}
@@ -62,7 +62,7 @@ const SubscribeForm = () => {
             className={style[`subscribe-button`]}
             disabled={isLoading || isDevelopment}
           >
-            {isLoading ? 'Subscribing...' : 'Subscribe'}
+            {isLoading ? 'Đang đăng ký...' : 'Đăng ký'}
           </button>
         </form>
       </div>

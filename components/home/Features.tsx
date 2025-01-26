@@ -60,20 +60,20 @@ type Feature = {
 const features: Feature[] = [
   {
     Icon: Bot,
-    name: 'Agents',
-    description: 'Advanced agents with file handling, code interpretation, and API actions',
+    name: 'AI API Key Providers',
+    description: 'Các tác nhân nâng cao với xử lý tệp, diễn giải mã và hành động API',
     href: '/docs/features/agents',
-    cta: 'Meet the Agents!',
+    cta: 'Gặp gỡ các Tác nhân!',
     background: <BentoBgImage imgLight={AgentsLight} imgDark={AgentsDark} alt="Agents" />,
     className: 'md:row-start-1 md:row-end-4 md:col-start-2 md:col-end-2',
   },
   {
     Icon: Terminal,
-    name: 'Code Interpreter',
+    name: 'Giữ chân khách hàng',
     description:
-      'Execute code in multiple languages securely via API with zero setup - Python, JavaScript, TypeScript, Go, and more',
+      'Thực thi mã trong nhiều ngôn ngữ một cách an toàn qua API mà không cần thiết lập - Python, JavaScript, TypeScript, Go và nhiều hơn nữa',
     href: '/docs/features/code_interpreter',
-    cta: 'Start Coding!',
+    cta: 'Bắt đầu mã hóa!',
     background: (
       <BentoBgImage imgLight={CodeInterpreter} imgDark={CodeInterpreter} alt="Artifacts" />
     ),
@@ -81,47 +81,47 @@ const features: Feature[] = [
   },
   {
     Icon: BrainCog,
-    name: 'Models',
-    description: 'AI model selection including Anthropic, AWS, OpenAI, Azure, and more',
+    name: 'Khai thác tiềm năng khách hàng',
+    description: 'Lựa chọn mô hình AI bao gồm Anthropic, AWS, OpenAI, Azure và nhiều hơn nữa',
     href: '/docs/configuration/pre_configured_ai',
-    cta: 'Pick Your Brain!',
+    cta: 'Chọn bộ não của bạn!',
     background: null,
     className: 'md:col-start-1 md:col-end-2 md:row-start-3 md:row-end-4',
   },
   {
     Icon: Code,
-    name: 'Artifacts',
-    description: 'Create React, HTML code, and Mermaid diagrams in chat',
+    name: 'Ứng dụng Chat AI miễn phí',
+    description: 'Tạo mã React, HTML và sơ đồ Mermaid trong cuộc trò chuyện',
     href: '/docs/features/artifacts',
-    cta: 'Craft Some Code!',
+    cta: 'Tạo mã!',
     background: <BentoBgImage imgLight={ArtifactsLight} imgDark={ArtifactsDark} alt="Artifacts" />,
     className: 'md:col-start-3 md:col-end-3 md:row-start-1 md:row-end-2',
   },
   {
     Icon: ImageIcon,
-    name: 'Multimodal',
-    description: 'Analyze images and chat with files using various endpoints',
+    name: 'Ứng dụng AI Agent',
+    description: 'Phân tích hình ảnh và trò chuyện với tệp bằng nhiều điểm cuối khác nhau',
     href: '/docs/features',
-    cta: 'Image This!',
+    cta: 'Hình ảnh này!',
     background: null,
     className: 'md:col-start-3 md:col-end-3 md:row-start-2 md:row-end-3',
   },
   {
     Icon: GitFork,
-    name: 'Fork',
+    name: 'Dịch vụ triển khai cao cấp',
     description:
-      'Split messages to create multiple conversation threads for better context control',
+      'Chia nhỏ tin nhắn để tạo nhiều luồng hội thoại nhằm kiểm soát ngữ cảnh tốt hơn',
     href: '/docs/features/fork',
-    cta: 'Fork It Up!',
+    cta: 'Phân nhánh!',
     background: null,
     className: 'md:col-start-3 md:col-end-3 md:row-start-3 md:row-end-4',
   },
   {
     Icon: Search,
-    name: 'Search',
-    description: 'Search for messages, files, and code snippets in an instant',
+    name: 'CRM AI',
+    description: 'Tìm kiếm tin nhắn, tệp và đoạn mã một cách nhanh chóng',
     href: '/docs/configuration/meilisearch',
-    cta: 'Find It Fast!',
+    cta: 'Tìm kiếm nhanh!',
     background: null,
     className: 'md:col-start-3 md:col-end-3 md:row-start-3 md:row-end-4',
   },
@@ -131,14 +131,14 @@ export default function Features() {
   return (
     <HomeSection>
       <Header
-        title="Unlock Potential"
-        description="Explore our unique and powerful features"
-        button={{ href: '/docs', text: 'Explore docs' }}
+      title="Mở khóa tiềm năng"
+      description="Khám phá các tính năng độc đáo và mạnh mẽ của chúng tôi"
+      button={{ href: '/docs', text: 'Khám phá tài liệu' }}
       />
       <BentoGrid>
-        {features.map((feature) => (
-          <BentoCard key={feature.name} {...feature} />
-        ))}
+      {features.map((feature) => (
+        <BentoCard key={feature.name} {...feature} />
+      ))}
       </BentoGrid>
     </HomeSection>
   )
