@@ -50,19 +50,19 @@ const menuItems: {
     ],
   },
   {
-    heading: 'Giải pháp',
+    heading: 'Giải pháp khách hàng',
     items: [
       {
-        name: 'Bắt đầu',
-        href: '/docs',
+        name: 'Giữ chân khách hàng ViVi',
+        href: '/crs',
       },
       {
-        name: 'Cài đặt cục bộ',
-        href: '/docs/local',
+        name: 'Kênh bán D2C',
+        href: '/d2c',
       },
       {
-        name: 'Cài đặt từ xa',
-        href: '/docs/remote',
+        name: 'Sale Tracking',
+        href: '/sale_tracking',
       },
     ],
   },
