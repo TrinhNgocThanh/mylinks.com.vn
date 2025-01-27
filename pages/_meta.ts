@@ -21,11 +21,11 @@ export default {
     },
   },
 
-  ai_services: {
+  pricing: {
     title: '✨AI Key & Ứng dụng AI',
     type: 'page',
     theme: {
-      timestamp: false,
+      layout: 'full',
     },
   },
 
@@ -37,14 +37,6 @@ export default {
     },
   },
 
-  pricing: {
-    title: 'Bảng giá',
-    display: 'hidden',
-    type: 'page',
-    theme: {
-      layout: 'full',
-    },
-  },
   contact_us: {
     title: 'Liên hệ',
     type: 'page',

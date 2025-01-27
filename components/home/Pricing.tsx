@@ -15,41 +15,56 @@ const tiers = [
   {
     name: 'Starter',
     id: 'tier-starter',
-    href: 'https://example.com',
+    href: 'https://api.mylinks.com.vn/detail/',
     featured: false,
-    description: 'Ideal for small teams and personal projects.',
+    description: 'Lý tưởng cho các nhóm nhỏ và dự án cá nhân.',
     price: '$1K',
-    mainFeatures: ['Role-based access', 'Basic analytics', 'Community support'],
-    cta: 'Sign up',
+    mainFeatures: [
+      'Công cụ AI Chat',
+      'AI Chat',
+      'NextChat',
+      'LobeChat',
+      'Chrome/Edge Extension',
+      'Tạo API AI Key riêng',
+    ],
+    cta: 'Đăng ký',
   },
   {
     name: 'Professional',
     id: 'tier-professional',
-    href: 'https://example.com',
+    href: 'https://api.mylinks.com.vn/detail/',
     featured: true,
-    description: 'For growing teams and businesses.',
+    description: 'Dành cho các nhóm và doanh nghiệp đang phát triển.',
     price: '$1M',
-    mainFeatures: ['Advanced analytics', 'Dedicated support', 'Custom configurations'],
-    cta: 'Sign up',
+    mainFeatures: [
+      'Công cụ AI Chat',
+      'AI Chat',
+      'NextChat',
+      'LobeChat',
+      'Chrome/Edge Extension',
+      'Tạo API AI Key riêng',
+      'Hỗ trợ chuyên dụng',
+    ],
+    cta: 'Đăng ký',
   },
   {
     name: 'Enterprise',
     id: 'tier-enterprise',
     href: '/contact-sales',
     featured: false,
-    price: 'Contact Sales',
-    description: 'Tailored solutions for large organizations.',
-    mainFeatures: ['Custom roles and permissions', 'Enterprise-grade security', '24/7 support'],
-    cta: 'Contact sales',
+    price: 'Liên hệ',
+    description: 'Giải pháp tùy chỉnh cho các tổ chức lớn.',
+    mainFeatures: ['Vai trò và quyền tùy chỉnh', 'Bảo mật cấp doanh nghiệp', 'Hỗ trợ 24/7'],
+    cta: 'Liên hệ',
   },
 ] as const
 
 const sections = [
   {
-    name: 'Access Control',
+    name: 'Kiểm soát truy cập',
     features: [
       {
-        name: 'Role-based access',
+        name: 'Truy cập dựa trên vai trò',
         tiers: {
           Starter: true,
           Professional: true,
@@ -57,7 +72,7 @@ const sections = [
         },
       },
       {
-        name: 'Custom permissions',
+        name: 'Quyền tùy chỉnh',
         tiers: {
           Starter: false,
           Professional: true,
@@ -67,10 +82,10 @@ const sections = [
     ],
   },
   {
-    name: 'Analytics & Reporting',
+    name: 'Phân tích & Báo cáo',
     features: [
       {
-        name: 'Basic analytics',
+        name: 'Phân tích cơ bản',
         tiers: {
           Starter: true,
           Professional: false,
@@ -78,7 +93,7 @@ const sections = [
         },
       },
       {
-        name: 'Advanced analytics',
+        name: 'Phân tích nâng cao',
         tiers: {
           Starter: false,
           Professional: true,
@@ -88,10 +103,10 @@ const sections = [
     ],
   },
   {
-    name: 'Integration',
+    name: 'Tích hợp',
     features: [
       {
-        name: 'Integration with external tools',
+        name: 'Tích hợp với các công cụ bên ngoài',
         tiers: {
           Starter: true,
           Professional: true,
@@ -99,9 +114,9 @@ const sections = [
         },
       },
       {
-        name: 'Custom API endpoints',
+        name: 'API tùy chỉnh',
         tiers: {
-          Starter: false,
+          Starter: true,
           Professional: true,
           Enterprise: true,
         },
@@ -109,10 +124,10 @@ const sections = [
     ],
   },
   {
-    name: 'Support & Maintenance',
+    name: 'Hỗ trợ & Bảo trì',
     features: [
       {
-        name: 'Community support',
+        name: 'Hỗ trợ cộng đồng',
         tiers: {
           Starter: true,
           Professional: true,
@@ -120,7 +135,7 @@ const sections = [
         },
       },
       {
-        name: 'Dedicated support',
+        name: 'Hỗ trợ chuyên dụng',
         tiers: {
           Starter: false,
           Professional: true,
@@ -128,7 +143,7 @@ const sections = [
         },
       },
       {
-        name: '24/7 support',
+        name: 'Hỗ trợ 24/7',
         tiers: {
           Starter: false,
           Professional: false,
@@ -146,8 +161,8 @@ export default function Pricing({ isPricingPage = false }: { isPricingPage?: boo
         <div className="flow-root pb-16 lg:pb-0">
           <div className="mx-auto max-w-7xl">
             <Header
-              title="Simple pricing for projects of all sizes"
-              description="Effortless pricing designed for every project size. Initiate your journey with our Starter plan, featuring essential tools for effective administration."
+              title="AI API Keys duy nhất cho các dự án AI mọi quy mô"
+              description="Bạn không cần phải lo lắng về chi phí về dịch vụ API Keys trực tiếp nữa. Hãy để chúng tôi lo cho bạn, chỉ một Key cho mọi mô hình AI."
               h="h1"
             />
 
@@ -233,7 +248,7 @@ export default function Pricing({ isPricingPage = false }: { isPricingPage?: boo
                 {/* Feature comparison (up to lg) */}
                 <section aria-labelledby="mobile-comparison-heading" className="lg:hidden">
                   <h2 id="mobile-comparison-heading" className="sr-only">
-                    Feature comparison
+                    So sánh tính năng
                   </h2>
 
                   <div className="mx-auto max-w-2xl space-y-16">
@@ -314,7 +329,7 @@ export default function Pricing({ isPricingPage = false }: { isPricingPage?: boo
                                               )}
 
                                               <span className="sr-only">
-                                                {feature.tiers[tier.name] === true ? 'Yes' : 'No'}
+                                                {feature.tiers[tier.name] === true ? 'Có' : 'Không'}
                                               </span>
                                             </>
                                           )}
@@ -346,7 +361,7 @@ export default function Pricing({ isPricingPage = false }: { isPricingPage?: boo
                 {/* Feature comparison (lg+) */}
                 <section aria-labelledby="comparison-heading" className="hidden lg:block">
                   <h2 id="comparison-heading" className="sr-only">
-                    Feature comparison
+                    So sánh tính năng
                   </h2>
 
                   <div className="grid grid-cols-4 gap-x-8 border-t border-gray-900/10 before:block">
@@ -397,7 +412,7 @@ export default function Pricing({ isPricingPage = false }: { isPricingPage?: boo
                             <thead>
                               <tr className="text-left">
                                 <th scope="col">
-                                  <span className="sr-only">Feature</span>
+                                  <span className="sr-only">Tính năng</span>
                                 </th>
                                 {tiers.map((tier) => (
                                   <th key={tier.id} scope="col">
@@ -450,7 +465,7 @@ export default function Pricing({ isPricingPage = false }: { isPricingPage?: boo
                                             )}
 
                                             <span className="sr-only">
-                                              {feature.tiers[tier.name] === true ? 'Yes' : 'No'}
+                                              {feature.tiers[tier.name] === true ? 'Có' : 'Không'}
                                             </span>
                                           </>
                                         )}
@@ -491,9 +506,9 @@ export default function Pricing({ isPricingPage = false }: { isPricingPage?: boo
         ) : (
           <>
             <div className="text-center mt-10">
-              For a detailed comparison and FAQ, see our{' '}
+              Để so sánh chi tiết và Câu hỏi thường gặp, hãy xem{' '}
               <Link href="/pricing" className="underline">
-                pricing page
+                trang giá cả
               </Link>
               .
             </div>
@@ -506,29 +521,29 @@ export default function Pricing({ isPricingPage = false }: { isPricingPage?: boo
 
 const faqs = [
   {
-    question: 'What is the MyLinks Admin Panel?',
+    question: 'Dịch vụ AI Key Mylinks là gì?',
     answer:
-      'The MyLinks Admin Panel is a powerful tool designed to provide administrators with extensive control and management capabilities over their MyLinks instance. It allows you to configure roles, manage users, access advanced analytics, and more.',
+      'Dịch vụ AI Key Mylinks là một công cụ mạnh mẽ được thiết kế để cung cấp cho quản trị viên khả năng kiểm soát và quản lý toàn diện đối với phiên bản MyLinks của họ. Nó cho phép bạn cấu hình vai trò, quản lý người dùng, truy cập phân tích nâng cao và nhiều hơn nữa.',
   },
   {
-    question: 'How can I access the Admin Panel?',
+    question: 'Làm thế nào để tôi có thể truy cập Bảng điều khiển quản trị?',
     answer:
-      'To access the MyLinks Admin Panel, you will need to subscribe to the paid plan that includes access to this feature. Once subscribed, you will receive credentials and instructions on how to access and utilize the Admin Panel.',
+      'Để truy cập Dịch vụ AI Key Mylinks , bạn sẽ cần đăng ký gói trả phí bao gồm tính năng này. Sau khi đăng ký, bạn sẽ nhận được thông tin đăng nhập và hướng dẫn về cách truy cập và sử dụng Bảng điều khiển quản trị.',
   },
   {
-    question: 'What features are available in the Admin Panel?',
+    question: 'Những tính năng nào có sẵn trong Bảng điều khiển quản trị?',
     answer:
-      'The Admin Panel offers features such as role-based access control, project configurations, user management with real-time data, analytics, integration with external tools, and more. It serves as a comprehensive tool for managing your MyLinks environment efficiently.',
+      'Dịch vụ AI Key Mylinks cung cấp các tính năng như kiểm soát truy cập dựa trên vai trò, cấu hình dự án, quản lý người dùng với dữ liệu thời gian thực, phân tích, tích hợp với các công cụ bên ngoài và nhiều hơn nữa. Nó là một công cụ toàn diện để quản lý môi trường MyLinks của bạn một cách hiệu quả.',
   },
   {
-    question: 'Is the Admin Panel included in the free plan?',
+    question: 'Dịch vụ AI Key Mylinks có được bao gồm trong gói miễn phí không?',
     answer:
-      'No, the Admin Panel is a premium feature available with paid subscriptions. The free plan of MyLinks includes core functionalities but does not grant access to the advanced capabilities offered by the Admin Panel.',
+      'Không, Dịch vụ AI Key Mylinks là một tính năng cao cấp có sẵn với các gói trả phí. Gói miễn phí của MyLinks bao gồm các chức năng cốt lõi nhưng không cấp quyền truy cập vào các khả năng nâng cao được cung cấp bởi Bảng điều khiển quản trị.',
   },
   {
-    question: 'Can I customize the Admin Panel according to my needs?',
+    question: 'Tôi có thể tùy chỉnh Dịch vụ AI Key Mylinks theo nhu cầu của mình không?',
     answer:
-      'Yes, the Admin Panel allows for customization and configuration based on your specific requirements. You can set up custom roles, configure project settings, integrate with external services, and tailor the panel to suit your workflow.',
+      'Có, Dịch vụ AI Key Mylinks cho phép tùy chỉnh và cấu hình dựa trên yêu cầu cụ thể của bạn. Bạn có thể thiết lập các vai trò tùy chỉnh, cấu hình cài đặt dự án, tích hợp với các dịch vụ bên ngoài và điều chỉnh bảng điều khiển để phù hợp với quy trình làm việc của bạn.',
   },
 ]
 
@@ -538,7 +553,7 @@ export function PricingFAQ() {
       <div className="mx-auto max-w-7xl px-6 pb-24 lg:pt-16 lg:px-8">
         <div className="mx-auto max-w-4xl divide-y divide-primary/10">
           <h2 className="text-2xl font-bold leading-10 tracking-tight text-primary">
-            Frequently asked questions
+            Câu hỏi thường gặp
           </h2>
           <dl className="mt-10 space-y-6 divide-y divide-primary/10">
             {faqs.map((faq) => (

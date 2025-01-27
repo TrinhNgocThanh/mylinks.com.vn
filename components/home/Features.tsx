@@ -62,7 +62,7 @@ const features: Feature[] = [
     Icon: Bot,
     name: 'AI API Key Providers',
     description: 'Các tác nhân nâng cao với xử lý tệp, diễn giải mã và hành động API',
-    href: '/ai_services',
+    href: '/pricing',
     cta: 'Xem thêm!',
     background: <BentoBgImage imgLight={AgentsLight} imgDark={AgentsDark} alt="Agents" />,
     className: 'md:row-start-1 md:row-end-4 md:col-start-2 md:col-end-2',
@@ -94,7 +94,7 @@ const features: Feature[] = [
     name: 'Sử dụng OpenAI, Gemini, và nhiều hơn nữa',
     description:
       'Sử dụng các mô hình AI chuyên nghiệp trong chỉ 1 ứng dụng để nâng cao hiệu suất và tăng cường khả năng cạnh tranh',
-    href: '/ai_services',
+    href: '/pricing',
     cta: 'Xem thêm!',
     background: <BentoBgImage imgLight={ArtifactsLight} imgDark={ArtifactsDark} alt="Artifacts" />,
     className: 'md:col-start-3 md:col-end-3 md:row-start-1 md:row-end-2',
@@ -104,7 +104,7 @@ const features: Feature[] = [
     name: 'Ứng dụng AI Agent',
     description:
       'Cung cấp dịch vụ AI Agent để tạo ra các ứng dụng AI một cách nhanh chóng và dễ dàng',
-    href: '/ai_services',
+    href: '/pricing',
     cta: 'Xem thêm!',
     background: null,
     className: 'md:col-start-3 md:col-end-3 md:row-start-2 md:row-end-3',
