@@ -109,32 +109,35 @@ const FooterMenu = () => {
     {
       title: 'GitHub',
       icon: <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: 'https://github.librechat.ai/',
+      href: '#',
     },
     {
       title: 'Discord',
       icon: <IconBrandDiscord className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: 'https://discord.librechat.ai/',
+      href: '#',
     },
     {
       title: 'LinkedIn',
       icon: <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: 'https://linkedin.librechat.ai/',
+      // href: 'https://linkedin.librechat.ai/',
+      href: '#',
     },
     {
       title: 'Twitter',
       icon: <IconBrandTwitter className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: 'https://x.com/LibreChatAI',
+      // href: 'https://x.com/LibreChatAI',
+      href: '#',
     },
     {
       title: 'YouTube',
       icon: <IconBrandYoutube className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: 'https://www.youtube.com/@LibreChat',
+      // href: 'https://www.youtube.com/@LibreChat',
+      href: '#',
     },
     {
       title: 'Email',
       icon: <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: 'mailto:contact@librechat.ai',
+      href: 'mailto:contact@mylinks.com.vn',
     },
   ]
 
@@ -156,7 +159,7 @@ const FooterMenu = () => {
           </div>
         ))}
         <div className="flex items-center justify-between md:col-span-6">
-          <div className="font-sans text-sm">© {new Date().getFullYear()} LibreChat</div>
+          <div className="font-sans text-sm">© {new Date().getFullYear()} MyLinks Co., Ltd.</div>
           {!isMobile && <FloatingDock items={socialLinks} desktopClassName="ml-auto" />}
         </div>
       </div>
