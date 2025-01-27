@@ -67,8 +67,16 @@ const menuItems: {
     ],
   },
   {
-    heading: 'Blog',
-    items: [{ name: 'Blog', href: '/blog' }],
+    heading: 'Blog & AI',
+    items: [
+      { name: 'Blog', href: '/blog' },
+      { name: 'ChatGPT', href: 'https://chatgpt.com/' },
+      { name: 'lLama /Meta AI', href: 'https://www.meta.ai/' },
+      { name: 'Gemini', href: 'https://gemini.google.com/' },
+      { name: 'Claude', href: 'https://claude.ai/' },
+      { name: 'xAI', href: 'https://x.com/i/grok/' },
+      { name: 'Thư viện Prompt', href: 'https://prompts.chat/' },
+    ],
   },
   {
     heading: 'Bản tin',
