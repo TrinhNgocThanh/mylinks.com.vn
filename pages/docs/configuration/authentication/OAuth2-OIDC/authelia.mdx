@@ -1,6 +1,6 @@
 ---
 title: Authelia
-description: Learn how to configure LibreChat to use Authelia for user authentication.
+description: Learn how to configure MyLinks to use Authelia for user authentication.
 ---
 
 # Authelia
@@ -12,7 +12,7 @@ description: Learn how to configure LibreChat to use Authelia for user authentic
 - Then in your `configuration.yml` add the following in the oidc section:
   ```bash filename="configuration.yml"
     - id: librechat
-      description: LibreChat
+      description: MyLinks
       secret: '$pbkdf2-GENERATED_SECRET_KEY_HERE'
       public: false
       authorization_policy: two_factor
@@ -26,7 +26,7 @@ description: Learn how to configure LibreChat to use Authelia for user authentic
   ```
 - Then restart Authelia
 
-# LibreChat
+# MyLinks
 
 - Open the `.env` file in your project folder and add the following variables:
   ```bash filename=".env"

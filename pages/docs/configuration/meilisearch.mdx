@@ -1,14 +1,14 @@
 ---
 title: Meilisearch
-description: Setting up MeiliSearch for LibreChat
+description: Setting up MeiliSearch for MyLinks
 ---
 
-# Setting up MeiliSearch for LibreChat
-- See: [Search feature in LibreChat](/docs/features/search) for a quick overview.
+# Setting up MeiliSearch for MyLinks
+- See: [Search feature in MyLinks](/docs/features/search) for a quick overview.
 
-MeiliSearch is a powerful, open-source search engine that enhances LibreChat's functionality by enabling full-text search, typo tolerance, and instant search results for past conversations. 
+MeiliSearch is a powerful, open-source search engine that enhances MyLinks's functionality by enabling full-text search, typo tolerance, and instant search results for past conversations. 
 
-Follow these steps to set up MeiliSearch for LibreChat:
+Follow these steps to set up MeiliSearch for MyLinks:
 
 ## 1. Download MeiliSearch
     - Go to the MeiliSearch GitHub releases page: https://github.com/meilisearch/meilisearch/releases
@@ -40,8 +40,8 @@ Follow these steps to set up MeiliSearch for LibreChat:
         ```
     - MeiliSearch will now start running on the default port (`7700`).
 
-## 6. Update LibreChat's Environment Variables
-    - Open the `.env` file in the root directory of your LibreChat project.
+## 6. Update MyLinks's Environment Variables
+    - Open the `.env` file in the root directory of your MyLinks project.
     - Add or update the following lines with your MeiliSearch configuration:
 
         ```sh filename=".env"
@@ -53,9 +53,9 @@ Follow these steps to set up MeiliSearch for LibreChat:
 
     - Replace `<your_master_key>` with the Master Key you generated earlier.
 
-## 7. Start/Restart LibreChat
-    - Start or restart your LibreChat application.
+## 7. Start/Restart MyLinks
+    - Start or restart your MyLinks application.
 
-That's it! With MeiliSearch set up and configured, LibreChat should now have the Conversation search feature enabled, allowing users to perform full-text searches, benefit from typo tolerance, and experience instant search results for their past conversations.
+That's it! With MeiliSearch set up and configured, MyLinks should now have the Conversation search feature enabled, allowing users to perform full-text searches, benefit from typo tolerance, and experience instant search results for their past conversations.
 
 Note: Make sure to keep the MeiliSearch process running in the background for the search functionality to work correctly. You may want to set up a script or service to keep MeiliSearch running persistently.

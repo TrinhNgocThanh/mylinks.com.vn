@@ -1,11 +1,11 @@
 ---
 title: Secure Deployment with Nginx
-description: Step-by-step guide for securing your LibreChat deployment with Nginx as a reverse proxy and HTTPS
+description: Step-by-step guide for securing your MyLinks deployment with Nginx as a reverse proxy and HTTPS
 ---
 
 # Secure Deployment with Nginx
 
-This guide covers the essential steps for securing your LibreChat deployment with an SSL/TLS certificate for HTTPS, setting up Nginx as a reverse proxy, and configuring your domain.
+This guide covers the essential steps for securing your MyLinks deployment with an SSL/TLS certificate for HTTPS, setting up Nginx as a reverse proxy, and configuring your domain.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ Before proceeding with certificate acquisition, point your domain to your cloud 
 
 ## Obtain an SSL/TLS Certificate
 
-To secure your LibreChat application with HTTPS, you'll need an SSL/TLS certificate. Let's Encrypt offers free certificates:
+To secure your MyLinks application with HTTPS, you'll need an SSL/TLS certificate. Let's Encrypt offers free certificates:
 
 1. Install Certbot:
     - For Ubuntu: `sudo apt-get install certbot python3-certbot-nginx`
@@ -40,7 +40,7 @@ To secure your LibreChat application with HTTPS, you'll need an SSL/TLS certific
 
 ## Set Up Nginx as a Reverse Proxy
 
-Nginx acts as a reverse proxy, forwarding client requests to your LibreChat application. There are two deployment options:
+Nginx acts as a reverse proxy, forwarding client requests to your MyLinks application. There are two deployment options:
 
 ### Option A: Using the `deploy-compose.yml` Docker Compose (Recommended)
 
@@ -101,8 +101,8 @@ server {
 
 1. Navigate to your application's directory:
 
-```bash filename="Replace 'LibreChat' with your actual application directory.
-cd LibreChat
+```bash filename="Replace 'MyLinks' with your actual application directory.
+cd MyLinks
 ```
 
 2. Start your application using Docker Compose:
@@ -113,7 +113,7 @@ sudo docker-compose -f ./deploy-compose.yml up -d
 
 ## Web Application Firewall
 
-Nginx can be configured to act as a web application firewall (WAF) by leveraging the OWASP Core Rule Set (CRS), which provides a robust set of rules to protect against common web application vulnerabilities and attacks. Using OWASP CRS with Nginx can enhance the security of your LibreChat deployment by adding an additional layer of protection.
+Nginx can be configured to act as a web application firewall (WAF) by leveraging the OWASP Core Rule Set (CRS), which provides a robust set of rules to protect against common web application vulnerabilities and attacks. Using OWASP CRS with Nginx can enhance the security of your MyLinks deployment by adding an additional layer of protection.
 
 1. Install OWASP CRS:
 
@@ -138,13 +138,13 @@ By enabling OWASP CRS in your Nginx configuration, you can leverage the comprehe
 
 ## Static File Caching and Compression
 
-LibreChat now supports static file caching and compression natively. If you're using NGINX to handle compression, you should disable compression in LibreChat to avoid redundant processing. You can do this by setting the `DISABLE_COMPRESSION` environment variable to `true` in your LibreChat configuration.
+MyLinks now supports static file caching and compression natively. If you're using NGINX to handle compression, you should disable compression in MyLinks to avoid redundant processing. You can do this by setting the `DISABLE_COMPRESSION` environment variable to `true` in your MyLinks configuration.
 
 ```.env
 # .env file
 DISABLE_COMPRESSION=true
 ```
 
-This will prevent LibreChat from compressing static files, allowing NGINX to handle compression more efficiently.
+This will prevent MyLinks from compressing static files, allowing NGINX to handle compression more efficiently.
 
-For more information on static file handling in LibreChat, including caching options, refer to the [Static File Handling](/docs/configuration/dotenv#static-file-handling) documentation.
+For more information on static file handling in MyLinks, including caching options, refer to the [Static File Handling](/docs/configuration/dotenv#static-file-handling) documentation.

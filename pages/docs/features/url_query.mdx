@@ -1,11 +1,11 @@
 ---
 title: Query Parameters - Dynamic Chat Configuration via URL
-description: Learn how to configure chat conversations using URL query parameters in LibreChat. Set models, endpoints, and conversation settings dynamically.
+description: Learn how to configure chat conversations using URL query parameters in MyLinks. Set models, endpoints, and conversation settings dynamically.
 ---
 
 # URL Query Parameters
 
-LibreChat supports dynamic configuration of chat conversations through URL query parameters. This feature allows you to initiate conversations with specific settings, models, and endpoints directly from the URL.
+MyLinks supports dynamic configuration of chat conversations through URL query parameters. This feature allows you to initiate conversations with specific settings, models, and endpoints directly from the URL.
 
 ### Chat Paths
 
@@ -122,14 +122,14 @@ This will automatically set the endpoint to `assistants`.
 
 ## Supported Parameters
 
-LibreChat supports a wide range of parameters for fine-tuning your conversation settings:
+MyLinks supports a wide range of parameters for fine-tuning your conversation settings:
 
-### LibreChat Settings
+### MyLinks Settings
 - `maxContextTokens`: Override the system-defined context window
 - `resendFiles`: Control file resubmission in subsequent messages
 - `promptPrefix`: Set custom instructions/system message
 - `imageDetail`: 'low', 'auto', or 'high' for image quality
-  - Note: while this is a LibreChat-specific parameter, it only affects the following endpoints:
+  - Note: while this is a MyLinks-specific parameter, it only affects the following endpoints:
   - OpenAI, Custom Endpoints, which are OpenAI-like, and Azure OpenAI, for which this defaults to 'auto'
 
 ### Model Parameters
@@ -199,7 +199,7 @@ Exercise caution when using query parameters:
 
 ## Parameter Validation
 
-All parameters are validated against LibreChat's schema before being applied. Invalid parameters or values will be ignored, and valid settings will be applied to the conversation.
+All parameters are validated against MyLinks's schema before being applied. Invalid parameters or values will be ignored, and valid settings will be applied to the conversation.
 
 ---
 
@@ -210,4 +210,4 @@ This feature enables powerful use cases like:
 
 ---
 
-#LibreChat #ChatConfiguration #AIParameters #OpenSource #URLQueryParameters
+#MyLinks #ChatConfiguration #AIParameters #OpenSource #URLQueryParameters

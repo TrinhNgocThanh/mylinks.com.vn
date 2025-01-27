@@ -1,7 +1,7 @@
 export default {
   index: {
     type: 'page',
-    title: '✨ Trang chủ',
+    title: 'Trang chủ',
     theme: {
       layout: 'raw',
     },
@@ -22,7 +22,7 @@ export default {
   },
 
   ai_services: {
-    title: 'AI Key & Ứng dụng AI',
+    title: '✨AI Key & Ứng dụng AI',
     type: 'page',
     theme: {
       timestamp: false,

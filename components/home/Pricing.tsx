@@ -506,24 +506,24 @@ export default function Pricing({ isPricingPage = false }: { isPricingPage?: boo
 
 const faqs = [
   {
-    question: 'What is the LibreChat Admin Panel?',
+    question: 'What is the MyLinks Admin Panel?',
     answer:
-      'The LibreChat Admin Panel is a powerful tool designed to provide administrators with extensive control and management capabilities over their LibreChat instance. It allows you to configure roles, manage users, access advanced analytics, and more.',
+      'The MyLinks Admin Panel is a powerful tool designed to provide administrators with extensive control and management capabilities over their MyLinks instance. It allows you to configure roles, manage users, access advanced analytics, and more.',
   },
   {
     question: 'How can I access the Admin Panel?',
     answer:
-      'To access the LibreChat Admin Panel, you will need to subscribe to the paid plan that includes access to this feature. Once subscribed, you will receive credentials and instructions on how to access and utilize the Admin Panel.',
+      'To access the MyLinks Admin Panel, you will need to subscribe to the paid plan that includes access to this feature. Once subscribed, you will receive credentials and instructions on how to access and utilize the Admin Panel.',
   },
   {
     question: 'What features are available in the Admin Panel?',
     answer:
-      'The Admin Panel offers features such as role-based access control, project configurations, user management with real-time data, analytics, integration with external tools, and more. It serves as a comprehensive tool for managing your LibreChat environment efficiently.',
+      'The Admin Panel offers features such as role-based access control, project configurations, user management with real-time data, analytics, integration with external tools, and more. It serves as a comprehensive tool for managing your MyLinks environment efficiently.',
   },
   {
     question: 'Is the Admin Panel included in the free plan?',
     answer:
-      'No, the Admin Panel is a premium feature available with paid subscriptions. The free plan of LibreChat includes core functionalities but does not grant access to the advanced capabilities offered by the Admin Panel.',
+      'No, the Admin Panel is a premium feature available with paid subscriptions. The free plan of MyLinks includes core functionalities but does not grant access to the advanced capabilities offered by the Admin Panel.',
   },
   {
     question: 'Can I customize the Admin Panel according to my needs?',

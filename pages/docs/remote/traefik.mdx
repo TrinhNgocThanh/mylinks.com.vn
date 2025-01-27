@@ -1,11 +1,11 @@
 ---
 title: Traefik
-description: Learn how to use Traefik as a reverse proxy and load balancer to expose your LibreChat instance securely over HTTPS with automatic SSL/TLS certificate management.
+description: Learn how to use Traefik as a reverse proxy and load balancer to expose your MyLinks instance securely over HTTPS with automatic SSL/TLS certificate management.
 ---
 
-# Using Traefik with LibreChat on Docker
+# Using Traefik with MyLinks on Docker
 
-[Traefik](https://traefik.io/) is a modern HTTP reverse proxy and load balancer that makes it easy to deploy and manage your services. If you're running LibreChat on Docker, you can use Traefik to expose your instance securely over HTTPS with automatic SSL certificate management.
+[Traefik](https://traefik.io/) is a modern HTTP reverse proxy and load balancer that makes it easy to deploy and manage your services. If you're running MyLinks on Docker, you can use Traefik to expose your instance securely over HTTPS with automatic SSL certificate management.
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ description: Learn how to use Traefik as a reverse proxy and load balancer to ex
 
 ## Configuration
 
-### Configure Traefik and LibreChat
+### Configure Traefik and MyLinks
 
     In your docker-compose.override.yml file, add the following configuration:
 
@@ -73,9 +73,9 @@ networks:
   docker-compose up -d
   ```
 
-  This will start Traefik and LibreChat containers. Traefik will automatically obtain an SSL/TLS certificate from Let's Encrypt and expose your LibreChat instance securely over HTTPS.
+  This will start Traefik and MyLinks containers. Traefik will automatically obtain an SSL/TLS certificate from Let's Encrypt and expose your MyLinks instance securely over HTTPS.
 
-You can now access your LibreChat instance at `https://your.domain.name`. Traefik will handle SSL/TLS termination and reverse proxy requests to your LibreChat container.
+You can now access your MyLinks instance at `https://your.domain.name`. Traefik will handle SSL/TLS termination and reverse proxy requests to your MyLinks container.
 
 ## Additional Notes
 
@@ -85,13 +85,13 @@ You can now access your LibreChat instance at `https://your.domain.name`. Traefi
 
 ## Static File Caching and Compression
 
-LibreChat now supports static file caching and compression natively. If you're using Traefik to handle compression, you should disable compression in LibreChat to avoid redundant processing. You can do this by setting the `DISABLE_COMPRESSION` environment variable to `true` in your LibreChat configuration.
+MyLinks now supports static file caching and compression natively. If you're using Traefik to handle compression, you should disable compression in MyLinks to avoid redundant processing. You can do this by setting the `DISABLE_COMPRESSION` environment variable to `true` in your MyLinks configuration.
 
 ```.env
 # .env file
 DISABLE_COMPRESSION=true
 ```
 
-This will prevent LibreChat from compressing static files, allowing Traefik to handle compression more efficiently.
+This will prevent MyLinks from compressing static files, allowing Traefik to handle compression more efficiently.
 
-For more information on static file handling in LibreChat, including caching options, refer to the [Static File Handling](/docs/configuration/dotenv#static-file-handling) documentation.
+For more information on static file handling in MyLinks, including caching options, refer to the [Static File Handling](/docs/configuration/dotenv#static-file-handling) documentation.

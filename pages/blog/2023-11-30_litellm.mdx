@@ -1,7 +1,7 @@
 ---
-title: Using LibreChat with LiteLLM Proxy 
+title: Using MyLinks with LiteLLM Proxy 
 date: 2023/11/30
-description: LiteLLM is a proxy server that allows LibreChat to access and load balance across over 100 large language models (LLMs) from various providers.
+description: LiteLLM is a proxy server that allows MyLinks to access and load balance across over 100 large language models (LLMs) from various providers.
 tags:
   - litellm
   - proxy
@@ -14,7 +14,7 @@ import { BlogHeader } from '@/components/blog/BlogHeader'
 
 <BlogHeader />
 
-# Using LibreChat with LiteLLM Proxy 
+# Using MyLinks with LiteLLM Proxy 
 Use **[LiteLLM Proxy](https://docs.litellm.ai/docs/simple_proxy)** for: 
 
 * Calling 100+ LLMs Huggingface/TogetherAI/etc. in the OpenAI ChatCompletions & Completions format
@@ -59,7 +59,7 @@ Litellm supports in-memory, redis, and s3 caching. Note: Caching currently only 
 Litellm supports various logging and observability options.  The settings below will enable Langfuse which will provide a cache_hit tag showing which conversations used cache.
 
 ## 2. Create a Config for LiteLLM proxy 
-LiteLLM requires a configuration file in addition to the override file. Within LibreChat, this will be `litellm/litellm-config.yml`. The file 
+LiteLLM requires a configuration file in addition to the override file. Within MyLinks, this will be `litellm/litellm-config.yml`. The file 
 below has the options to enable llm proxy to various providers, load balancing, Redis caching, and Langfuse monitoring. Review documentation for other configuration options.
 More information on LiteLLM configurations here: **[docs.litellm.ai/docs/simple_proxy](https://docs.litellm.ai/docs/simple_proxy)**
 
@@ -245,7 +245,7 @@ general_settings:
 
 </Callout>
 
-## 3. Configure LibreChat
+## 3. Configure MyLinks
 
 Use `librechat.yaml` [Configuration file (guide here)](/docs/configuration/librechat_yaml/object_structure/custom_endpoint) to add Reverse Proxies as separate endpoints.
 

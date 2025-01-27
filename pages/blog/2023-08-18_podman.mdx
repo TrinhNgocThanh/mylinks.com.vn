@@ -18,29 +18,29 @@ import { BlogHeader } from '@/components/blog/BlogHeader'
 
 If you don't like docker compose, don't want a bare-metal installation, but still want to leverage the benefits from the isolation and modularity of containers - this is the guide you should use.
 
-> Likewise, If you are actively developing LibreChat, aren't using the service productively (i.e production environments), you should avoid this guide and look to something easier to work with such as docker compose.
+> Likewise, If you are actively developing MyLinks, aren't using the service productively (i.e production environments), you should avoid this guide and look to something easier to work with such as docker compose.
 
 **Important:** `docker` and `podman` commands are for the most part, interoperable and interchangeable. The code instructions below will use (and heavily favor) `podman`.
 
 ##  Creating the base image
 
-Since LibreChat is very active in development, it's recommended for now to build
+Since MyLinks is very active in development, it's recommended for now to build
 the image locally for the container you plan on using. Thankfully this is easy enough to do.
 
 In your target directory, run the following:
 
-```bash filename="Clone the LibreChat repository"
-git clone https://github.com/danny-avila/LibreChat
+```bash filename="Clone the MyLinks repository"
+git clone https://github.com/danny-avila/MyLinks
 ```
 
-This will add a directory, `LibreChat` into your local environment.
+This will add a directory, `MyLinks` into your local environment.
 
-Without entering the `LibreChat` directory, add a script `./image.sh` with the following:
+Without entering the `MyLinks` directory, add a script `./image.sh` with the following:
 
 > If you don't want to run this as a script, you can run the container command rather images
 
-```bash filename="Build the base container image for LibreChat"
-podman build --tag "librechat:local" --file ./LibreChat/Dockerfile
+```bash filename="Build the base container image for MyLinks"
+podman build --tag "librechat:local" --file ./MyLinks/Dockerfile
 ```
 
 > Note: the downside of running a base container that has a live root is that image revisions need to be done manually. The easiest way is to remove and recreate the image when the container is no longer. If that's not possible for you, manually updating the image to increment versions can be done manually. Simply amend $image with the version you're building.
@@ -49,10 +49,10 @@ podman build --tag "librechat:local" --file ./LibreChat/Dockerfile
 
 ## Setting up the env file
 
-Execute the following command to create a env file solely for LibreChat containers:
+Execute the following command to create a env file solely for MyLinks containers:
 
 ```bash filename="Copy env.example file to .env"
-cp ./LibreChat/.env.example .env
+cp ./MyLinks/.env.example .env
 ```
 
 This will add the env file to the top level directory that we will create the containers, allowing us to pass it easily as via the `--env-file` command argument.
@@ -61,14 +61,14 @@ Follow [this guide](/docs/configuration/pre_configured_ai) to populate the conta
 
 ```sh filename=".env"
 HOST=0.0.0.0
-MONGO_URI=mongodb://librechat-mongodb:27017/LibreChat
+MONGO_URI=mongodb://librechat-mongodb:27017/MyLinks
 MEILI_HOST=http://librechat-meilisearch:7700
 MEILI_NO_ANALYTICS=true
 ```
 
-These values will be uses by some of our containers to correctly use container DNS, using the LibreChat network.
+These values will be uses by some of our containers to correctly use container DNS, using the MyLinks network.
 
-## Creating a network for LibreChat
+## Creating a network for MyLinks
 
 If you're going about this the _manual_ way, it's likely safe to assume you're running more than a few different containers and services on your machine. One of the nice features offered by most container engines is that you don't need to have every single container exposed on the host network. This has the added benefit of not exposing your data and dependant services to other containers on your host.
 
@@ -80,7 +80,7 @@ We will be using this network when creating our containers.
 
 ## Creating dependant containers
 
-LibreChat currently uses mongoDB and meilisearch, so we'll also be creating those containers.
+MyLinks currently uses mongoDB and meilisearch, so we'll also be creating those containers.
 
 ## Mongodb
 
@@ -110,9 +110,9 @@ podman run \
   docker.io/getmeili/meilisearch:v1.0;
 ```
 
-## Starting LibreChat
+## Starting MyLinks
 
-```bash filename="Start LibreChat"
+```bash filename="Start MyLinks"
 podman run \
   --name="librechat" \
   --network=librechat \
@@ -122,9 +122,9 @@ podman run \
   librechat:local;
 ```
 
-If you're using LibreChat behind another load balancer, you can omit the `-p` declaration, you can also attach the container to the same network by adding an additional network argument:
+If you're using MyLinks behind another load balancer, you can omit the `-p` declaration, you can also attach the container to the same network by adding an additional network argument:
 
-```bash filename="Attach LibreChat to specific network"
+```bash filename="Attach MyLinks to specific network"
 --network=librechat \
 ```
 
@@ -140,17 +140,17 @@ Podman has a declarative way to ensure that pod starts up automatically on syste
 
 To use this method you need to run the following commands:
 
-First, let's stop any running containers related to LibreChat:
+First, let's stop any running containers related to MyLinks:
 
-```bash filename="Stop LibreChat container"
+```bash filename="Stop MyLinks container"
 podman stop librechat
 ```
 
-```bash filename="Stop LibreChat MongoDB container"
+```bash filename="Stop MyLinks MongoDB container"
 podman stop librechat-mongodb
 ```
 
-```bash filename="Stop LibreChat MeiliSearch container"
+```bash filename="Stop MyLinks MeiliSearch container"
 podman stop librechat-meilisearch
 ```
 
@@ -177,7 +177,7 @@ After saving, we'll update the script to be executable:
 chmod +x ./install.sh
 ```
 
-Assuming we aren't running those LibreChat containers from before, we can enable on-boot services for each of them using the following:
+Assuming we aren't running those MyLinks containers from before, we can enable on-boot services for each of them using the following:
 
 ```bash filename="Install Librechat MongoDB"
 ./install.sh librechat-mongodb 
@@ -211,14 +211,14 @@ podman volume export librechat-mongodb-data --output "librechat-mongodb-backup-$
 
 These will leave archive files that you can do what you wish with, including reverting volumes to a previous state if needed. Refer to the **[official podman documentation](https://docs.podman.io/en/latest/markdown/podman-volume-import.1.html)** for how to do this.
 
-## Updating LibreChat
+## Updating MyLinks
 
-LibreChat is still under development, so depending on published images isn't a huge viability at the moment. Instead, it's easier to update using git. Data persistence in librechat is managed outside of the main container, so it's rather simple to do an in-place update.
+MyLinks is still under development, so depending on published images isn't a huge viability at the moment. Instead, it's easier to update using git. Data persistence in librechat is managed outside of the main container, so it's rather simple to do an in-place update.
 
-In the parent directory containing the LibreChat repo:
+In the parent directory containing the MyLinks repo:
 
 ```bash filename="Update Git Repo"
-(cd LibreChat && git pull)
+(cd MyLinks && git pull)
 ```
 
 ```bash filename="Stop Systemd Service"
@@ -234,7 +234,7 @@ podman rmi -f librechat:local
 ```
 
 ```bash filename="Rebuild Librechat Image"
-podman build --tag "librechat:local" --file ./LibreChat/Dockerfile
+podman build --tag "librechat:local" --file ./MyLinks/Dockerfile
 ```
 
 ```bash filename="Recreate Liberchat Container"
@@ -249,20 +249,20 @@ podman stop librechat && systemctl --user start container-librechat
 
 ## Integrating the Configuration File in Podman Setup
 
-When using Podman for setting up LibreChat, you can also integrate the [`librechat.yaml` configuration file](/docs/configuration/librechat_yaml).
+When using Podman for setting up MyLinks, you can also integrate the [`librechat.yaml` configuration file](/docs/configuration/librechat_yaml).
 
 This file allows you to define specific settings and AI endpoints, such as Mistral AI, tailoring the application to your needs.
 
 After creating your `.env` file as detailed in the previous steps, follow these instructions to integrate the `librechat.yaml` configuration:
 
 1. Place your `librechat.yaml` file in your project's root directory.
-2. Modify the Podman run command for the LibreChat container to include a volume argument that maps the `librechat.yaml` file inside the container. This can be done by adding the following line to your Podman run command:
+2. Modify the Podman run command for the MyLinks container to include a volume argument that maps the `librechat.yaml` file inside the container. This can be done by adding the following line to your Podman run command:
 
   ```bash filename="Specify Docker Volume Mapping"
   -v "./librechat.yaml:/app/librechat.yaml"
   ```
 
-For example, the modified Podman run command for starting LibreChat will look like this:
+For example, the modified Podman run command for starting MyLinks will look like this:
 
 It seems like there was a misunderstanding regarding your request as I provided the split commands earlier. To make it into one command, I would combine all the elements into a single command block:
 
@@ -270,8 +270,8 @@ It seems like there was a misunderstanding regarding your request as I provided 
 docker run --name="librechat" --network=librechat --env-file="./.env" -p 3080:3080 --detach librechat:local
 ```
 
-By mapping the `librechat.yaml` file into the container, Podman ensures that your custom configurations are applied to LibreChat, enabling a tailored AI experience.
+By mapping the `librechat.yaml` file into the container, Podman ensures that your custom configurations are applied to MyLinks, enabling a tailored AI experience.
 
 Ensure that the `librechat.yaml` file is correctly formatted and contains valid settings. 
 
-Any errors in this file might affect the functionality of LibreChat. For more information on configuring `librechat.yaml`, refer to the [Custom Endpoints & Configuration](/docs/configuration/librechat_yaml).
+Any errors in this file might affect the functionality of MyLinks. For more information on configuring `librechat.yaml`, refer to the [Custom Endpoints & Configuration](/docs/configuration/librechat_yaml).

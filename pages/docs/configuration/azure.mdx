@@ -1,13 +1,13 @@
 ---
 title: Azure OpenAI
-description: Comprehensive guide for configuring Azure OpenAI through the `librechat.yaml` file AKA the LibreChat Config file. This document is your one-stop resource for understanding and customizing Azure settings and models.
+description: Comprehensive guide for configuring Azure OpenAI through the `librechat.yaml` file AKA the MyLinks Config file. This document is your one-stop resource for understanding and customizing Azure settings and models.
 ---
 
 # Azure OpenAI
 
-**Azure OpenAI Integration for LibreChat**
+**Azure OpenAI Integration for MyLinks**
 
-LibreChat boasts compatibility with Azure OpenAI API services, treating the endpoint as a first-class citizen. To properly utilize Azure OpenAI within LibreChat, it's crucial to configure the [`librechat.yaml` file](/docs/configuration/librechat_yaml/object_structure/azure_openai) according to your specific needs. This document guides you through the essential setup process which allows seamless use of multiple deployments and models with as much flexibility as needed.
+MyLinks boasts compatibility with Azure OpenAI API services, treating the endpoint as a first-class citizen. To properly utilize Azure OpenAI within MyLinks, it's crucial to configure the [`librechat.yaml` file](/docs/configuration/librechat_yaml/object_structure/azure_openai) according to your specific needs. This document guides you through the essential setup process which allows seamless use of multiple deployments and models with as much flexibility as needed.
 
 ## Example
 
@@ -77,15 +77,15 @@ Each level of configuration is extensively detailed in their respective sections
 
 2. **Configure Azure OpenAI Settings**: Follow the detailed structure outlined below to populate your Azure OpenAI settings appropriately. This includes specifying API keys, instance names, model groups, and other essential configurations.
 
-3. **Make sure to Remove Legacy Settings**: If you are using any of the [legacy configurations](#legacy-setup), be sure to remove. The LibreChat server will also detect these and remind you.
+3. **Make sure to Remove Legacy Settings**: If you are using any of the [legacy configurations](#legacy-setup), be sure to remove. The MyLinks server will also detect these and remind you.
 
 4. **Save Your Changes**: After accurately inputting your settings, save the `librechat.yaml` file.
 
-5. **Restart LibreChat**: For the changes to take effect, restart your LibreChat application. This ensures that the updated configurations are loaded and utilized.
+5. **Restart MyLinks**: For the changes to take effect, restart your MyLinks application. This ensures that the updated configurations are loaded and utilized.
 
 ## Required Fields
 
-To properly integrate Azure OpenAI with LibreChat, specific fields must be accurately configured in your `librechat.yaml` file. These fields are validated through a combination of custom and environmental variables to ensure the correct setup. Here are the detailed requirements based on the validation process:
+To properly integrate Azure OpenAI with MyLinks, specific fields must be accurately configured in your `librechat.yaml` file. These fields are validated through a combination of custom and environmental variables to ensure the correct setup. Here are the detailed requirements based on the validation process:
 
 ## Endpoint-Level Configuration
 
@@ -283,7 +283,7 @@ endpoints:
 
 5. **Model identifiers**: An unknown model (to the project) can be used as a model identifier, but it must match a known model to reflect its known context length, which is crucial for message/token handling; e.g., `gpt-7000` will be valid but default to a 4k token limit, whereas `gpt-4-turbo` will be recognized as having a 128k context limit.
 
-Applying these setup requirements thoughtfully will ensure a correct and efficient integration of Azure OpenAI services with LibreChat through the `librechat.yaml` configuration. Always validate your configuration against the latest schema definitions and guidelines to maintain compatibility and functionality.
+Applying these setup requirements thoughtfully will ensure a correct and efficient integration of Azure OpenAI services with MyLinks through the `librechat.yaml` configuration. Always validate your configuration against the latest schema definitions and guidelines to maintain compatibility and functionality.
 
 
 ### Model Deployments
@@ -398,7 +398,7 @@ Configuring the `plugins` field will configure Plugins to use Azure models.
 
 The base URL for Azure OpenAI API requests can be dynamically configured. This is useful for proxying services such as [Cloudflare AI Gateway](https://developers.cloudflare.com/ai-gateway/providers/azureopenai/), or if you wish to explicitly override the baseURL handling of the app.
 
-LibreChat will use the baseURL field for your Azure model grouping, which can include placeholders for the Azure OpenAI API instance and deployment names.
+MyLinks will use the baseURL field for your Azure model grouping, which can include placeholders for the Azure OpenAI API instance and deployment names.
 
 In the configuration, the base URL can be customized like so:
 
@@ -566,7 +566,7 @@ endpoints:
   - Example: `https://example.services.ai.azure.com/models/` for `https://example.services.ai.azure.com/models/chat/completions?api-version=2024-05-01-preview`
   - The `version` query parameter is optional and can be specified in the `baseURL` field.
 - The model name used in the `models` field must match the deployment name of the model in the Azure AI Foundry. 
-- Compatibility with LibreChat relies on parity with OpenAI API specs, which at the time of writing, are typically **"Pay-as-you-go"** or "Models as a Service" (MaaS) deployments on Azure AI Studio, that are OpenAI-SDK-compatible with either `v1/completions` or `models/chat/completions` endpoint handling.
+- Compatibility with MyLinks relies on parity with OpenAI API specs, which at the time of writing, are typically **"Pay-as-you-go"** or "Models as a Service" (MaaS) deployments on Azure AI Studio, that are OpenAI-SDK-compatible with either `v1/completions` or `models/chat/completions` endpoint handling.
 - All models that offer serverless deployments ("Serverless APIs") are compatible from the Azure model catalog. You can filter by "Serverless API" under Deployment options and "Chat completion" under inference tasks to see the full list; however, real time endpoint models have not been tested.
 - These serverless inference endpoint/models may or may not support function calling according to OpenAI API specs, which enables their use with Agents.
 - If using legacy "/v1/completions" (without "chat"), you need to set the `forcePrompt` field to `true` in your [group config.](#group-level-configuration)

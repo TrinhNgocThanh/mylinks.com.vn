@@ -5,10 +5,10 @@ export default function Logo() {
     <>
       <div className="flex gap-2 items-center">
         {/* Image */}
-        <Image src="/librechat.svg" alt="LibreChat Logo" width={30} height={30} />
+        <Image src="/mylinks_logo.svg" alt="MyLinks Logo" width={30} height={30} />
         {/* Text */}
         <span className="ml-2 text-lg font-bold text-gray-600 dark:text-gray-300">
-          About LibreChat...
+          About MyLinks...
         </span>
         {/* CSS for hover effect */}
         <style jsx>{`

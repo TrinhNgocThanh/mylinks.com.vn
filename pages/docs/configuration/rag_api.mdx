@@ -1,6 +1,6 @@
 ---
 title: RAG API
-description: Configure Retrieval-Augmented Generation (RAG) API for document indexing and retrieval using Langchain and FastAPI. This API integrates with LibreChat to provide context-aware responses based on user-uploaded files.
+description: Configure Retrieval-Augmented Generation (RAG) API for document indexing and retrieval using Langchain and FastAPI. This API integrates with MyLinks to provide context-aware responses based on user-uploaded files.
 ---
 
 # RAG API Configuration
@@ -21,7 +21,7 @@ Plugins support is not enabled as the whole "plugin/tool" framework will get a c
 
 ## Setup
 
-To set up the RAG API with LibreChat, follow these steps:
+To set up the RAG API with MyLinks, follow these steps:
 
 ### Docker Setup - Quick Start
 
@@ -125,7 +125,7 @@ That's it!
 
 ### Docker Setup
 
-For Docker, the setup is configured for you in both the default `docker-compose.yml` and `deploy-compose.yml` files, and you will just need to make sure you are using the latest docker image and compose files. Make sure to read the [Updating LibreChat guide for Docker](/docs/local/docker#update-librechat) if you are unsure how to update your Docker instance.
+For Docker, the setup is configured for you in both the default `docker-compose.yml` and `deploy-compose.yml` files, and you will just need to make sure you are using the latest docker image and compose files. Make sure to read the [Updating MyLinks guide for Docker](/docs/local/docker#update-librechat) if you are unsure how to update your Docker instance.
 
 Docker uses the "lite" image of the RAG API by default, which only supports remote embeddings, leveraging embeddings proccesses from OpenAI or a remote service you have configured for HuggingFace/Ollama.
 
@@ -135,13 +135,13 @@ As always, make these changes in your update URLs [Docker Compose Override File]
 
 If you wish to see an example of a compose file that only includes the PostgresQL + PGVector database and the Python API, see `rag.yml` file at the root of the project.
 
-**Important:** When using the default docker setup, the .env file, where configuration options can be set for the RAG API, is shared between LibreChat and the RAG API.
+**Important:** When using the default docker setup, the .env file, where configuration options can be set for the RAG API, is shared between MyLinks and the RAG API.
 
 ### Local Setup
 
 Local, non-container setup is more hands-on, and for this you can refer to the [RAG API repo.](https://github.com/danny-avila/rag_api/)
 
-In a local setup, you will need to manually set the `RAG_API_URL` in your LibreChat `.env` file to where it's available from your setup.
+In a local setup, you will need to manually set the `RAG_API_URL` in your MyLinks `.env` file to where it's available from your setup.
 
 This contrasts Docker, where is already set in the default `docker-compose.yml` file.
 
@@ -150,13 +150,13 @@ This contrasts Docker, where is already set in the default `docker-compose.yml` 
 The RAG API provides several configuration options that can be set using environment variables from an `.env` file accessible to the API. Most of them are optional, asides from the credentials/paths necessary for the provider you configured. In the default setup, only `RAG_OPENAI_API_KEY` is required.
 
 <Callout type="warning" title="Docker" emoji="🐳">
-When using the default docker setup, the .env file is shared between LibreChat and the RAG API. For this reason, it's important to define the needed variables shown in the [RAG API readme.md](https://github.com/danny-avila/rag_api/blob/main/README.md)
+When using the default docker setup, the .env file is shared between MyLinks and the RAG API. For this reason, it's important to define the needed variables shown in the [RAG API readme.md](https://github.com/danny-avila/rag_api/blob/main/README.md)
 </Callout>
 
 Here are some notable configurations:
 
 - `RAG_OPENAI_API_KEY`: The API key for OpenAI API Embeddings (if using default settings).
-    - Note: `OPENAI_API_KEY` will work but `RAG_OPENAI_API_KEY` will override it in order to not conflict with the LibreChat credential.
+    - Note: `OPENAI_API_KEY` will work but `RAG_OPENAI_API_KEY` will override it in order to not conflict with the MyLinks credential.
 - `RAG_PORT`: The port number where the API server will run. Defaults to port 8000.
 - `RAG_HOST`: The hostname or IP address where the API server will run. Defaults to "0.0.0.0"
 - `COLLECTION_NAME`: The name of the collection in the vector store. Default is "testcollection".
@@ -173,22 +173,22 @@ For a complete list and their descriptions, please refer to the [RAG API repo.](
 
 ## Usage
 
-Once the RAG API is set up and running, it seamlessly integrates with LibreChat. When a user uploads files to a conversation, the RAG API indexes those files and uses them to provide context-aware responses.
+Once the RAG API is set up and running, it seamlessly integrates with MyLinks. When a user uploads files to a conversation, the RAG API indexes those files and uses them to provide context-aware responses.
 
 **To utilize the RAG API effectively:**
 
-1. Ensure that the necessary files are uploaded to the conversation in LibreChat. If `RAG_API_URL` is not configured, or is not reachable, the file upload will fail.
+1. Ensure that the necessary files are uploaded to the conversation in MyLinks. If `RAG_API_URL` is not configured, or is not reachable, the file upload will fail.
 2. As the user interacts with the chatbot, the RAG API will automatically retrieve relevant information from the indexed files based on the user's input.
-3. The retrieved information will be used to augment the user's prompt, enabling LibreChat to generate more accurate and contextually relevant responses.
+3. The retrieved information will be used to augment the user's prompt, enabling MyLinks to generate more accurate and contextually relevant responses.
 4. Craft your prompts carefully when you attach files as the default behavior is to query the vector store upon every new message to a conversation with a file attached. 
     - You can disable the default behavior by toggling the "Resend Files" option to an "off" state, found in the conversation settings.
     - Doing so allows for targeted file queries, making it so that the "retrieval" will only be done when files are explicitly attached to a message.
-    - ![image](https://github.com/danny-avila/LibreChat/assets/110412045/29a2468d-85ac-40d7-90be-a945301c5729)
+    - ![image](https://github.com/danny-avila/MyLinks/assets/110412045/29a2468d-85ac-40d7-90be-a945301c5729)
 5. You only have to upload a file once to use it multiple times for RAG.
     - You can attach uploaded/indexed files to any new message or conversation using the Side Panel:
-    - ![image](https://github.com/danny-avila/LibreChat/assets/110412045/b40cb3d3-e6e7-46ec-bc74-65d194f55a1e)
+    - ![image](https://github.com/danny-avila/MyLinks/assets/110412045/b40cb3d3-e6e7-46ec-bc74-65d194f55a1e)
     - Note: The files must be in the "Host" storage, as "OpenAI" files are treated differently and exclusive to Assistants. In other words, they must not have been uploaded when the Assistants endpoint was selected and active. You can view and manage your files by clicking here from the Side Panel.
-    - ![image](https://github.com/danny-avila/LibreChat/assets/110412045/1f27e974-4124-4ee3-8091-13514cb4cbca)
+    - ![image](https://github.com/danny-avila/MyLinks/assets/110412045/1f27e974-4124-4ee3-8091-13514cb4cbca)
 
 
 ## Troubleshooting
@@ -198,6 +198,6 @@ If you encounter any issues while setting up or using the RAG API, consider the 
 - Double-check that all the required environment variables are correctly set in your `.env` file.
 - Ensure that the vector database is properly configured and accessible.
 - Verify that the OpenAI API key or other necessary credentials are valid.
-- Check both the LibreChat and RAG API logs for any error messages or warnings.
+- Check both the MyLinks and RAG API logs for any error messages or warnings.
 
-If the problem persists, please refer to the RAG API documentation or seek assistance from the LibreChat community on GitHub Discussions or Discord.
+If the problem persists, please refer to the RAG API documentation or seek assistance from the MyLinks community on GitHub Discussions or Discord.

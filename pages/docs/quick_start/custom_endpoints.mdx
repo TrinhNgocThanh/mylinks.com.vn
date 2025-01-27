@@ -2,9 +2,9 @@ import AdditionalLinks from '@/components/repeated/AdditionalLinks.mdx';
 
 # Custom Endpoints
 
-LibreChat supports OpenAI API compatible services using the `librechat.yaml` configuration file.
+MyLinks supports OpenAI API compatible services using the `librechat.yaml` configuration file.
 
-This guide assumes you have already set up LibreChat using Docker, as shown in the **[Local Setup Guide](/docs/quick_start/local_setup).**
+This guide assumes you have already set up MyLinks using Docker, as shown in the **[Local Setup Guide](/docs/quick_start/local_setup).**
 
 ## Step 1. Create or Edit a Docker Override File
 
@@ -76,7 +76,7 @@ OPENROUTER_KEY=your_openrouter_api_key
 - As way of example, this guide assumes you have setup Ollama independently and is accessible to you at `http://host.docker.internal:11434`
     - "host.docker.internal" is a special DNS name that resolves to the internal IP address used by the host.
     - You may need to change this to the actual IP address of your Ollama instance.
-- In a future guide, we will go into setting up Ollama along with LibreChat.
+- In a future guide, we will go into setting up Ollama along with MyLinks.
 
 ## Step 4. Run the App
 
@@ -96,6 +96,6 @@ docker compose restart
 
 ## Conclusion
 
-**That's it!** You have now configured **Custom Endpoints** for your LibreChat instance. 
+**That's it!** You have now configured **Custom Endpoints** for your MyLinks instance. 
 
 <AdditionalLinks />

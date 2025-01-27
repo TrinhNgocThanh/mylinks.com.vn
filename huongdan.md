@@ -1,4 +1,4 @@
-# LibreChat Docs
+# MyLinks Docs
 
 Based on [Nextra](https://nextra.site/)
 
@@ -16,13 +16,13 @@ docker-compose up -d
 
 docker logs <container_id_or_name>
 
-D:\AI\langflow\AIApps\LibreChat
+D:\AI\langflow\AIApps\MyLinks
 
 translate to vietnamese
 
 https://github.com/TrinhNgocThanh/mylinks.com.vn
 
-https://github.com/LibreChat-AI/librechat.ai/tree/main/pages/blog/2024-05-01_mlx.mdx
+https://github.com/MyLinks-AI/librechat.ai/tree/main/pages/blog/2024-05-01_mlx.mdx
 Pre-requisites: Node.js 18+, pnpm 9+
 
 1. Optional: Create env based on [.env.template](./.env.template)

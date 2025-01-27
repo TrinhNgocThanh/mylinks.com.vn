@@ -112,7 +112,7 @@ export function Hero() {
         <ContainerScroll className="hidden md:block">
           <Image
             src={DemoImageDark}
-            alt="LibreChat UI Dark"
+            alt="MyLinks UI Dark"
             height={800}
             width={1600}
             className="dark:block hidden mx-auto rounded-2xl object-cover object-left-top w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl"
@@ -120,7 +120,7 @@ export function Hero() {
           />
           <Image
             src={DemoImageLight}
-            alt="LibreChat UI Light"
+            alt="MyLinks UI Light"
             height={800}
             width={1600}
             className="block dark:hidden mx-auto rounded-2xl object-cover object-left-top w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl"
@@ -131,7 +131,7 @@ export function Hero() {
         <div className="block md:hidden">
           <Image
             src={DemoImageMobileDark}
-            alt="LibreChat UI Dark Mobile"
+            alt="MyLinks UI Dark Mobile"
             height={400}
             width={800}
             className="dark:block hidden mx-auto rounded-2xl object-cover object-left-top w-full max-w-sm"
@@ -139,7 +139,7 @@ export function Hero() {
           />
           <Image
             src={DemoImageMobileLight}
-            alt="LibreChat UI Light Mobile"
+            alt="MyLinks UI Light Mobile"
             height={400}
             width={800}
             className="block dark:hidden mx-auto rounded-2xl object-cover object-left-top w-full max-w-sm"

@@ -1,6 +1,6 @@
 ---
 title: Authentication System
-description: This guide explains how to use the user authentication system of LibreChat, which offers secure and easy email and social logins. You will learn how to set up sign up, log in, password reset, and more.
+description: This guide explains how to use the user authentication system of MyLinks, which offers secure and easy email and social logins. You will learn how to set up sign up, log in, password reset, and more.
 --- 
 
 # Basic Configuration:
@@ -15,7 +15,7 @@ Here's an overview of the general configuration.
   options={[
     ['ALLOW_EMAIL_LOGIN', 'boolean', 'Enable or disable ONLY email login.','ALLOW_EMAIL_LOGIN=true'],
     ['ALLOW_REGISTRATION', 'boolean', 'Enable or disable Email registration of new users.','ALLOW_REGISTRATION=true'],
-    ['ALLOW_SOCIAL_LOGIN', 'boolean', 'Allow users to connect to LibreChat with various social networks.','ALLOW_SOCIAL_LOGIN=false'],
+    ['ALLOW_SOCIAL_LOGIN', 'boolean', 'Allow users to connect to MyLinks with various social networks.','ALLOW_SOCIAL_LOGIN=false'],
     ['ALLOW_SOCIAL_REGISTRATION', 'boolean', 'Enable or disable registration of new users using various social networks.','ALLOW_SOCIAL_REGISTRATION=false'],
   ]}
 />
@@ -31,11 +31,11 @@ Quick Tips:
 
 <div style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column"}}>
   <div className="image-light-theme">
-    ![register-light](https://github.com/danny-avila/LibreChat/assets/32828263/4c51dc25-31d3-4c51-8c2a-0cdfb5a25033)
+    ![register-light](https://github.com/danny-avila/MyLinks/assets/32828263/4c51dc25-31d3-4c51-8c2a-0cdfb5a25033)
   </div>
 
   <div className="image-dark-theme">
-    ![register](https://github.com/danny-avila/LibreChat/assets/32828263/3bc5371d-e51d-4e91-ac68-56db6e85bb2c)
+    ![register](https://github.com/danny-avila/MyLinks/assets/32828263/3bc5371d-e51d-4e91-ac68-56db6e85bb2c)
   </div>
 </div>
 
@@ -43,7 +43,7 @@ Quick Tips:
 ## Session Expiry and Refresh Token
 
 - Default values: session expiry: 15 minutes, refresh token expiry: 7 days
-  - For more information: **[GitHub PR #927 - Refresh Token](https://github.com/danny-avila/LibreChat/pull/927)**
+  - For more information: **[GitHub PR #927 - Refresh Token](https://github.com/danny-avila/MyLinks/pull/927)**
 
 <OptionTable
   options={[
@@ -111,7 +111,7 @@ The create-user script allows you to add users directly to the database, even wh
 
 2. For the deploy-compose.yml:
    ```
-   docker exec -it LibreChat-API /bin/sh -c "cd .. && npm run create-user"
+   docker exec -it MyLinks-API /bin/sh -c "cd .. && npm run create-user"
    ```
 
 3. For local development (from project root):
@@ -132,7 +132,7 @@ To delete a user, you can use the delete-user script:
 
 2. For the deploy-compose.yml:
    ```
-   docker exec -it LibreChat-API /bin/sh -c "cd .. && npm run delete-user email@domain.com"
+   docker exec -it MyLinks-API /bin/sh -c "cd .. && npm run delete-user email@domain.com"
    ```
 
 3. For local development (from project root):

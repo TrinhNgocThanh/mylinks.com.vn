@@ -5,12 +5,12 @@ const PrivacyPolicy = () => {
   return (
     <main className="max-w-xl mx-auto">
       <div className="p-5">
-        <h1 className="text-3xl font-extrabold pb-6">Privacy Policy for LibreChat</h1>
+        <h1 className="text-3xl font-extrabold pb-6">Privacy Policy for MyLinks</h1>
 
         <pre className="leading-relaxed whitespace-pre-wrap" style={{ fontFamily: 'sans-serif' }}>
           {`Effective Date: February 18, 2024
 
-This Privacy Policy outlines the types of personal information that is received and collected by LibreChat`}{' '}
+This Privacy Policy outlines the types of personal information that is received and collected by MyLinks`}{' '}
           <Link href="https://librechat.ai">https://librechat.ai</Link>
           {` and how it is used.
 
@@ -26,7 +26,7 @@ The information we collect is used solely for the purposes specified: order proc
 
 3. Children's Privacy
 
-LibreChat is committed to protecting the privacy of children. We do not knowingly collect any personal information from children under the age of 13.
+MyLinks is committed to protecting the privacy of children. We do not knowingly collect any personal information from children under the age of 13.
 
 4. Updates to This Policy
 
@@ -38,7 +38,7 @@ If you have any questions about this Privacy Policy, please contact us at`}{' '}
           <Link href="mailto:contact@librechat.ai">contact@librechat.ai</Link>
           {`. 
 
-Your use of LibreChat indicates your agreement to this Privacy Policy.`}
+Your use of MyLinks indicates your agreement to this Privacy Policy.`}
         </pre>
       </div>
       <Button onClick={() => window.open('/', '_self')}>← Go Back</Button>
@@ -50,19 +50,19 @@ const TermsOfServices = () => {
   return (
     <main className="max-w-xl mx-auto">
       <div className="p-5">
-        <h1 className="text-3xl font-extrabold pb-6">Terms and Conditions for LibreChat</h1>
+        <h1 className="text-3xl font-extrabold pb-6">Terms and Conditions for MyLinks</h1>
 
         <pre className="leading-relaxed whitespace-pre-wrap" style={{ fontFamily: 'sans-serif' }}>
           {`Effective Date: February 18, 2024
 
-Welcome to LibreChat, the informational website for the open-source AI chat platform, available at `}{' '}
+Welcome to MyLinks, the informational website for the open-source AI chat platform, available at `}{' '}
           <Link href="https://librechat.ai">https://librechat.ai</Link>
           {`. These Terms of Service ("Terms") govern your use of our website and the services we offer. By accessing or using the Website, you agree to be bound by these Terms and our Privacy Policy, accessible at `}{' '}
           <Link href="https://librechat.ai/privacy">https://librechat.ai//privacy</Link>
           {`.
 
 1. Ownership
-Upon purchasing a package from LibreChat, you are granted the right to download and use the code for accessing an admin panel for LibreChat. While you own the downloaded code, you are expressly prohibited from reselling, redistributing, or otherwise transferring the code to third parties without explicit permission from LibreChat.
+Upon purchasing a package from MyLinks, you are granted the right to download and use the code for accessing an admin panel for MyLinks. While you own the downloaded code, you are expressly prohibited from reselling, redistributing, or otherwise transferring the code to third parties without explicit permission from MyLinks.
 
 2. User Data
 We collect personal data, such as your name, email address, and payment information, as described in our Privacy Policy. This information is collected to provide and improve our services, process transactions, and communicate with you.
@@ -95,7 +95,7 @@ const CookiePolicy = () => {
   return (
     <main className="max-w-xl mx-auto">
       <div className="p-5">
-        <h1 className="text-3xl font-extrabold pb-6">Cookie Policy for LibreChat</h1>
+        <h1 className="text-3xl font-extrabold pb-6">Cookie Policy for MyLinks</h1>
 
         <pre className="leading-relaxed whitespace-pre-wrap" style={{ fontFamily: 'sans-serif' }}>
           {`Effective Date: February 18, 2024

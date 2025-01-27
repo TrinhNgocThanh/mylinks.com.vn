@@ -1,6 +1,6 @@
 ---
 title: LDAP/AD
-description: Learn how to configure LibreChat to use LDAP for user authentication.
+description: Learn how to configure MyLinks to use LDAP for user authentication.
 ---
 
 # LDAP/AD Server Authentication
@@ -64,10 +64,10 @@ You can specify a mapping between the attributes of Librechat users and those of
 
 **Username or Email**
 
-By default, LibreChat uses an email address and password for authentication.
+By default, MyLinks uses an email address and password for authentication.
 This may sometimes cause problem with LDAP and you may want to use a username instead.
 Set the `LDAP_SEARCH_FILTER` to filter for the username instead (e.g. `LDAP_SEARCH_FILTER=uid={{username}}`
-and configure LibreChat to request login via username:
+and configure MyLinks to request login via username:
 
 <OptionTable
   options={[

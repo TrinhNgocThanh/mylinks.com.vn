@@ -13,14 +13,14 @@ export default {
   guidelines: {
     type: 'page',
     title: 'Contributor Guidelines',
-    href: 'https://github.com/danny-avila/LibreChat/blob/main/.github/CONTRIBUTING.md',
+    href: 'https://github.com/danny-avila/MyLinks/blob/main/.github/CONTRIBUTING.md',
     newWindow: true,
   },
   conventions: 'Coding Conventions',
   security: {
     type: 'page',
     title: 'Security Policy',
-    href: 'https://github.com/danny-avila/LibreChat/blob/main/.github/SECURITY.md',
+    href: 'https://github.com/danny-avila/MyLinks/blob/main/.github/SECURITY.md',
     newWindow: true,
   },
 }

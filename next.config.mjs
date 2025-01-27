@@ -33,11 +33,11 @@ const nonPermanentRedirects = [
   // Up to date Redirects:
   ['/discord', 'https://discord.librechat.ai'],
   ['/demo', 'https://chat.librechat.ai'],
-  ['/issue', 'https://github.com/danny-avila/LibreChat/issues/new/choose'],
-  ['/new-issue', 'https://github.com/danny-avila/LibreChat/issues/new/choose'],
-  ['/issues', 'https://github.com/danny-avila/LibreChat/issues'],
-  ['/gh-support', 'https://github.com/danny-avila/LibreChat/discussions/categories/support'],
-  ['/gh-discussions', 'https://github.com/danny-avila/LibreChat/discussions'],
+  ['/issue', 'https://github.com/danny-avila/MyLinks/issues/new/choose'],
+  ['/new-issue', 'https://github.com/danny-avila/MyLinks/issues/new/choose'],
+  ['/issues', 'https://github.com/danny-avila/MyLinks/issues'],
+  ['/gh-support', 'https://github.com/danny-avila/MyLinks/discussions/categories/support'],
+  ['/gh-discussions', 'https://github.com/danny-avila/MyLinks/discussions'],
   ['/roadmap', '/docs/roadmap'],
   ['/features', '/docs/features'],
   /* Danny moved these :P */

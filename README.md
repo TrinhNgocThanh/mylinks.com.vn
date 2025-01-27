@@ -1,4 +1,4 @@
-# LibreChat Docs
+# MyLinks Docs
 
 Based on [Nextra](https://nextra.site/)
 

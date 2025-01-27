@@ -14,8 +14,8 @@
 ```markdown
 ---
 date: 2024-04-01
-title: LibreChat v0.7.0
-description: The v0.7.0 release of LibreChat
+title: MyLinks v0.7.0
+description: The v0.7.0 release of MyLinks
 authorid: danny
 ogImage: /images/changelog/2024-04-01-v0.7.0.png
 ---

@@ -1,10 +1,10 @@
 ---
 title: Token Usage
-description: This covers how to track and control your token usage for the OpenAI/Plugins endpoints in LibreChat. You will learn how to view your transactions, enable user balances, and add credits to your account.
+description: This covers how to track and control your token usage for the OpenAI/Plugins endpoints in MyLinks. You will learn how to view your transactions, enable user balances, and add credits to your account.
 ---
 # Token Usage
 
-As of `v6.0.0`, LibreChat accurately tracks token usage for the OpenAI/Plugins endpoints.
+As of `v6.0.0`, MyLinks accurately tracks token usage for the OpenAI/Plugins endpoints.
 This can be viewed in your database's "Transactions" collection. 
 
 In the future, you will be able to toggle viewing how much a conversation has cost you.
@@ -61,10 +61,10 @@ npm run list-balances
 - The above said, plugins are checked at each generation step, since the process works with multiple API calls. Anything the LLM has generated since the initial user prompt is shared to the user in the error message as seen below.
 - There is a 150 token buffer for titling since this is a 2 step process, that averages around 200 total tokens. In the case of insufficient funds, the titling is cancelled before any spend happens and no error is thrown.
 
-![image](https://github.com/danny-avila/LibreChat/assets/110412045/78175053-9c38-44c8-9b56-4b81df61049e)
+![image](https://github.com/danny-avila/MyLinks/assets/110412045/78175053-9c38-44c8-9b56-4b81df61049e)
 
 ## More details
-source: [LibreChat/discussions/1640](https://github.com/danny-avila/LibreChat/discussions/1640#discussioncomment-8251970)
+source: [MyLinks/discussions/1640](https://github.com/danny-avila/MyLinks/discussions/1640#discussioncomment-8251970)
 
 > "rawAmount": -000, // what's this?
 
@@ -116,6 +116,6 @@ There will be more customization for this soon from the `librechat.yaml` file.
 
 ## Preview
 
-![image](https://github.com/danny-avila/LibreChat/assets/110412045/39a1aa5d-f8fc-43bf-81f2-299e57d944bb)
+![image](https://github.com/danny-avila/MyLinks/assets/110412045/39a1aa5d-f8fc-43bf-81f2-299e57d944bb)
 
-![image](https://github.com/danny-avila/LibreChat/assets/110412045/e1b1cc3f-8981-4c7c-a5f8-e7badbc6f675)
+![image](https://github.com/danny-avila/MyLinks/assets/110412045/e1b1cc3f-8981-4c7c-a5f8-e7badbc6f675)

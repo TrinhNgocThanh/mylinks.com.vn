@@ -1,9 +1,9 @@
 ---
 title: 🐋 Docker
-description: How to install LibreChat locally with Docker
+description: How to install MyLinks locally with Docker
 ---
 
-# Local Installation of LibreChat with Docker
+# Local Installation of MyLinks with Docker
 
 For most scenarios, Docker Compose is the recommended installation method due to its simplicity, ease of use, and reliability.
 
@@ -16,14 +16,14 @@ For most scenarios, Docker Compose is the recommended installation method due to
 
 ## Installation Steps
 
-Follow these steps to set up LibreChat with the default configuration:
+Follow these steps to set up MyLinks with the default configuration:
 
 ```bash filename="Clone the Repository"
-git clone https://github.com/danny-avila/LibreChat.git
+git clone https://github.com/danny-avila/MyLinks.git
 ```
 
-```bash filename="Navigate to the LibreChat Directory"
-cd LibreChat
+```bash filename="Navigate to the MyLinks Directory"
+cd MyLinks
 ```
 
 ```bash filename="Create a .env File from .env.example"
@@ -32,17 +32,17 @@ cp .env.example .env
 
 > **Note:** **If you're using Windows, you might need to use `copy` instead of `cp`.**
 
-```sh filename="Start LibreChat"
+```sh filename="Start MyLinks"
 docker compose up -d
 ```
 
-<Callout type="success" title="Access LibreChat!" emoji="🎉">
+<Callout type="success" title="Access MyLinks!" emoji="🎉">
   **Visit [http://localhost:3080/](http://localhost:3080/)**
 </Callout>
 
-## Update LibreChat
+## Update MyLinks
 
-The following commands will fetch the latest LibreChat project changes, including any necessary changes to the docker compose files, as well as the latest prebuilt images.
+The following commands will fetch the latest MyLinks project changes, including any necessary changes to the docker compose files, as well as the latest prebuilt images.
 
 > **Note:** you may need to prefix commands with sudo according to your environment permissions.
 
@@ -54,11 +54,11 @@ docker compose down
 git pull
 ```
 
-```bash filename="Pull the latest LibreChat image""
+```bash filename="Pull the latest MyLinks image""
 docker compose pull
 ```
 
-```bash filename="Start LibreChat"
+```bash filename="Start MyLinks"
 docker compose up
 ```
 
@@ -70,7 +70,7 @@ Unlock additional features by exploring our configuration guides to learn how to
 - Other advanced configuration options
 - And more
 
-This will enable you to customize your LibreChat experience with optional features.
+This will enable you to customize your MyLinks experience with optional features.
 
 **see also:**
 - [Docker Override](/docs/configuration/docker_override)

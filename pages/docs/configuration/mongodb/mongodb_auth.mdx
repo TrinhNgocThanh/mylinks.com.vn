@@ -12,14 +12,14 @@ For more info about the override file, please consult: [Docker Compose Override]
 **Notes:**
 
 - The default configuration is secure by blocking external port access, but we can take it a step further with access credentials.
-- As noted by the developers of MongoDB themselves, authentication in MongoDB is fairly complex. We will be taking a simple approach that will be good enough for most cases, especially for existing configurations of LibreChat. To learn more about how mongodb authentication works with docker, see here: https://hub.docker.com/_/mongo/
+- As noted by the developers of MongoDB themselves, authentication in MongoDB is fairly complex. We will be taking a simple approach that will be good enough for most cases, especially for existing configurations of MyLinks. To learn more about how mongodb authentication works with docker, see here: https://hub.docker.com/_/mongo/
 - This guide focuses exclusively on terminal-based setup procedures.
 - While the steps outlined may also be applicable to Docker Desktop environments, or with non-Docker, local MongoDB, or other container setups, details specific to those scenarios are not provided.
 
 **There are 3 basic steps:**
 
 - Create an admin user within your mongodb container
-- Enable authentication and create a "readWrite" user for "LibreChat"
+- Enable authentication and create a "readWrite" user for "MyLinks"
 - Configure the MONGO_URI with newly created user
 
 ## TL;DR
@@ -64,12 +64,12 @@ docker compose up -d mongodb
 docker exec -it chat-mongodb mongosh -u adminUser -p securePassword --authenticationDatabase admin
 ```
 
-```bash filename="Switch to LibreChat database"
-use LibreChat
+```bash filename="Switch to MyLinks database"
+use MyLinks
 ```
 
-```bash filename="Create user in LibreChat database"
-db.createUser({ user: 'user', pwd: 'userpasswd', roles: [ { role: "readWrite", db: "LibreChat" } ] });
+```bash filename="Create user in MyLinks database"
+db.createUser({ user: 'user', pwd: 'userpasswd', roles: [ { role: "readWrite", db: "MyLinks" } ] });
 ```
 
 ```bash filename="Exit MongoDB shell after creating user"
@@ -99,7 +99,7 @@ services:
     volumes:
       - ./librechat.yaml:/app/librechat.yaml
     environment:
-      - MONGO_URI=mongodb://user:userpasswd@mongodb:27017/LibreChat
+      - MONGO_URI=mongodb://user:userpasswd@mongodb:27017/MyLinks
   mongodb:
     command: mongod --auth
   mongo-express:
@@ -142,7 +142,7 @@ docker exec -it chat-mongodb mongosh
 You should see the following output:
 
 ```bash filename="Output"
-~/LibreChat$ docker exec -it chat-mongodb mongosh
+~/MyLinks$ docker exec -it chat-mongodb mongosh
 Current Mongosh Log ID: 65bfed36f7d7e3c2b01bcc3d
 Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1
 Using MongoDB:          7.0.4
@@ -274,17 +274,17 @@ test> db.runCommand({ connectionStatus: 1 })
 test>
 ```
 
-Switch to the "LibreChat" database
+Switch to the "MyLinks" database
 
-> Note: This the default database unless you changed it via the MONGO_URI; default URI: `MONGO_URI=mongodb://mongodb:27017/LibreChat`
+> Note: This the default database unless you changed it via the MONGO_URI; default URI: `MONGO_URI=mongodb://mongodb:27017/MyLinks`
 
-```bash filename="Switch to the LibreChat database"
-use LibreChat
+```bash filename="Switch to the MyLinks database"
+use MyLinks
 ```
 
-Now we'll create the actual credentials to be used by our Mongo connection string, which will be limited to read/write access of the "LibreChat" database. As before, replace the example with your desired credentials:
+Now we'll create the actual credentials to be used by our Mongo connection string, which will be limited to read/write access of the "MyLinks" database. As before, replace the example with your desired credentials:
 
-`db.createUser({ user: 'user', pwd: 'userpasswd', roles: [ { role: "readWrite", db: "LibreChat" } ] });`
+`db.createUser({ user: 'user', pwd: 'userpasswd', roles: [ { role: "readWrite", db: "MyLinks" } ] });`
 
 You should see an "ok" output again.
 
@@ -314,19 +314,19 @@ docker compose up -d mongodb
 docker exec -it chat-mongodb mongosh -u adminUser -p securePassword --authenticationDatabase admin
 ```
 
-```bash filename="Switch to LibreChat database"
-use LibreChat
+```bash filename="Switch to MyLinks database"
+use MyLinks
 ```
 
-```bash filename="Show current users in LibreChat database"
+```bash filename="Show current users in MyLinks database"
 show users
 ```
 
-```bash filename="Create a new user in LibreChat database"
-db.createUser({ user: 'user', pwd: 'userpasswd', roles: [ { role: "readWrite", db: "LibreChat" } ] });
+```bash filename="Create a new user in MyLinks database"
+db.createUser({ user: 'user', pwd: 'userpasswd', roles: [ { role: "readWrite", db: "MyLinks" } ] });
 ```
 
-If it's still not persisting, you can try running the commands with all containers running, but note that the `LibreChat` container will be in an error/retrying state.
+If it's still not persisting, you can try running the commands with all containers running, but note that the `MyLinks` container will be in an error/retrying state.
 
 ## Step 3: Update the `MONGO_URI` to Use the New Credentials
 
@@ -334,7 +334,7 @@ Finally, we add the new connection string with our newly created credentials to 
 
 ```yaml filename="docker-compose.override.yml"
     environment:
-      - MONGO_URI=mongodb://user:userpasswd@mongodb:27017/LibreChat
+      - MONGO_URI=mongodb://user:userpasswd@mongodb:27017/MyLinks
 ```
 
 So our override file looks like this now:
@@ -347,16 +347,16 @@ services:
     volumes:
       - ./librechat.yaml:/app/librechat.yaml
     environment:
-      - MONGO_URI=mongodb://user:userpasswd@mongodb:27017/LibreChat
+      - MONGO_URI=mongodb://user:userpasswd@mongodb:27017/MyLinks
   mongodb:
     command: mongod --auth
 ```
 
-You should now run `docker compose up` successfully authenticated with read/write access to the LibreChat database
+You should now run `docker compose up` successfully authenticated with read/write access to the MyLinks database
 
 Example successful connection:
 ```bash filename="successful connection example"
-LibreChat         | 2024-02-04 20:59:43 info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+MyLinks         | 2024-02-04 20:59:43 info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
 chat-mongodb      | {"t":{"$date":"2024-02-04T20:59:53.880+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"192.168.160.4:58114","uuid":{"uuid":{"$uuid":"027bdc7b-a3f4-429a-80ee-36cd172058ec"}},"connectionId":17,"connectionCount":10}}
 ```
 
