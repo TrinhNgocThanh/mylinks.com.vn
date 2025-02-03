@@ -38,7 +38,7 @@ export default function App({ Component, pageProps }) {
   }, [])
   return (
     <div
-      className={`${GeistSans.variable} font-sans ${GeistMono.variable} font-mono ${GeistSans.variable} `}
+      className={`${GeistSans.variable} font-sans ${GeistMono.variable} font-sans ${GeistSans.variable} `}
     >
       {/* <div className={`${GeistSans.variable}`}> */}
       <PostHogProvider client={posthog}>

@@ -76,7 +76,7 @@ const BlogCard = ({ page, handleTagClick, selectedTags = [] }) => {
         </div>
         {/* Modified title and description to be clickable */}
         <div className="mb-2 ml-1 mr-1 cursor-pointer" onClick={handleCardClick}>
-          <h2 className="font-mono text-xl mb-2 font-bold">
+          <h2 className="font-sans text-xl mb-2 font-bold">
             {page.meta?.title || page.frontMatter?.title || page.name}
           </h2>
           <div>{truncateDescription(page.frontMatter?.description || '')}</div>

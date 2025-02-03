@@ -154,7 +154,7 @@ const FooterMenu = () => {
       <div className="grid grid-cols-2 md:grid-cols-6 text-base gap-y-8 gap-x-2">
         {menuItems.map((menu) => (
           <div key={menu.heading}>
-            <p className="pb-2 font-mono font-bold text-primary">{menu.heading}</p>
+            <p className="pb-2 font-sans font-bold text-primary">{menu.heading}</p>
             <ul className="flex flex-col gap-2">
               {menu.items.map((item) => (
                 <li key={item.name}>

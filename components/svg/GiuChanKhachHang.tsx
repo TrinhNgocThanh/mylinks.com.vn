@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-function RepoOfTheDay() {
+function GiuChanKhachHang() {
   return (
     <svg
       data-date-format="longDate"
@@ -24,7 +24,7 @@ function RepoOfTheDay() {
         x="6"
         y="10"
       >
-        <div>AI API Router</div>
+        <div>Giải pháp tiên phong</div>
       </foreignObject>
       <svg
         height="45"
@@ -54,7 +54,7 @@ function RepoOfTheDay() {
         x="64"
         y="24"
       >
-        <div>Dịch vụ AI Keys</div>
+        <div>Giữ chân khách hàng</div>
       </foreignObject>
       <foreignObject
         height="36"
@@ -76,4 +76,4 @@ function RepoOfTheDay() {
   )
 }
 
-export default RepoOfTheDay
+export default GiuChanKhachHang

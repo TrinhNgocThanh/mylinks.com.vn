@@ -19,11 +19,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        // sans: ['var(--font-geist-sans)'],
-        // mono: ['var(--font-geist-mono)'],
         sans: ['Roboto', 'Arial', 'sans-serif'], // Font không chân
         serif: ['Roboto', 'Arial', 'sans-serif'], // Font có chân
-        mono: ['Roboto', 'Arial', 'sans-serif'], // Font monospace    
+        mono: ['Roboto', 'Arial', 'sans-serif'], // Font monospace
       },
       colors: {
         gray: {

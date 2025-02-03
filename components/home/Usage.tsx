@@ -22,9 +22,9 @@ import DateTicker from '@/components/ui/date-ticker'
 // ]
 
 const stats = [
-  { name: 'GitHub stars', value: 19500 },
+  { name: 'AI Models', value: 200 },
   { name: 'Docker pulls', value: 2810000 },
-  { name: 'Project started', value: new Date('2023-01-11') },
+  { name: 'Project started', value: new Date('2024-01-11') },
 ]
 
 export const Usage = () => (
@@ -61,7 +61,7 @@ export const Usage = () => (
         <div className="flex flex-col sm:flex-row justify-around sm:justify-center gap-4 sm:gap-10">
           {stats.map((item) => (
             <div key={item.name} className="text-center">
-              <p className="text-xl sm:text-2xl font-bold text-primary/80 font-mono">
+              <p className="text-xl sm:text-2xl font-bold text-primary/80 font-sans">
                 {item.name === 'Project started' && item.value instanceof Date ? (
                   <DateTicker targetDate={item.value} />
                 ) : typeof item.value === 'number' ? (

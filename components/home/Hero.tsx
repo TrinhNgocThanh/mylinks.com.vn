@@ -8,9 +8,10 @@ import DemoImageMobileLight from './img/demo_mobile_light.png'
 import DemoImageMobileDark from './img/demo_mobile_dark.png'
 import RepoOfTheDay from '@/components/svg/RepoOfTheDay'
 import { HomeSection } from './components/HomeSection'
-import RossIndex from '@/components/svg/RossIndex'
+// import RossIndex from '@/components/svg/RossIndex'
 import DemoImageLight from './img/demo_light.png'
 import DemoImageDark from './img/demo_dark.png'
+import GiuChanKhachHang from '../svg/GiuChanKhachHang'
 
 const HERO_TITLE = {
   firstPart: 'Customer',
@@ -23,12 +24,12 @@ const DEMO_LINK = 'https://chat.mylinks.com.vn/'
 // const GITHUB_LINK = 'https://github.com/danny-avila/librechat'
 // const GITHUB_STARS_IMG =
 //   'https://img.shields.io/github/stars/danny-avila/librechat?label=librechat&style=social'
-const REPO_OF_THE_DAY_LINK = 'https://trendshift.io/repositories/4685'
-const ROSS_INDEX_LINK = 'https://runacap.com/ross-index/q1-24/'
+// const REPO_OF_THE_DAY_LINK = 'https://trendshift.io/repositories/4685'
+// const ROSS_INDEX_LINK = 'https://runacap.com/ross-index/q1-24/'
 
 const HeroTitle = React.memo(() => (
   <div className="w-full text-center">
-    <h1 className="text-7xl lg:text-9xl font-bold font-mono inline-block">
+    <h1 className="text-7xl lg:text-9xl font-bold font-sans inline-block">
       {HERO_TITLE.firstPart}{' '}
       <span className="relative inline-block bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
         {HERO_TITLE.highlight}
@@ -65,7 +66,7 @@ const HeroDescription = React.memo(() => (
 const HeroLinks = React.memo(() => (
   <div className="flex items-center justify-center gap-x-14 flex-wrap">
     <CardContainer className="inter-var">
-      <Link href={REPO_OF_THE_DAY_LINK}>
+      <Link href="/pricing">
         <CardBody className="bg-transparent w-auto h-auto px-12">
           <CardItem
             translateZ="100"
@@ -83,17 +84,17 @@ const HeroLinks = React.memo(() => (
         as="button"
         className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
       >
-        <span>Giải pháp Mobile App : Giữ chân khách hàng</span>
+        <span>Giải pháp giữ chân khách hàng & ứng dụng AI</span>
       </HoverBorderGradient>
     </div>
     <CardContainer className="inter-var">
-      <Link href={ROSS_INDEX_LINK}>
+      <Link href="/crs">
         <CardBody className="bg-transparent w-full h-full px-12">
           <CardItem
             translateZ="100"
             className="cursor-pointer shadow-2xl dark:hover:shadow-emerald-500/[0.1]"
           >
-            <RossIndex />
+            <GiuChanKhachHang />
           </CardItem>
         </CardBody>
       </Link>

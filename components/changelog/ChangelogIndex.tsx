@@ -73,7 +73,7 @@ export const ChangelogIndex = ({ maxItems }: { maxItems?: number }) => {
                             })
                           : null}
                       </div>
-                      <h2 className="block font-mono text-2xl opacity-90 group-hover:opacity-100">
+                      <h2 className="block font-sans text-2xl opacity-90 group-hover:opacity-100">
                         {page.meta?.title || page.frontMatter?.title || page.name}
                       </h2>
                       <div className="opacity-80 text-lg group-hover:opacity-100">

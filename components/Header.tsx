@@ -21,7 +21,7 @@ export const Header = ({
   return (
     <div className={cn('mx-auto max-w-4xl text-center mb-12 text-balance', className)}>
       {title && (
-        <TitleTag className="mt-2 text-4xl font-bold tracking-tight sm:text-7xl text-balance font-mono">
+        <TitleTag className="mt-2 text-4xl font-bold tracking-tight sm:text-7xl text-balance font-sans">
           {title}
         </TitleTag>
       )}
