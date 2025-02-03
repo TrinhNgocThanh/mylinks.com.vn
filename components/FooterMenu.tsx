@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { FloatingDock } from '@/components/ui/floating-dock'
 import {
-  IconBrandGithub,
-  IconBrandDiscord,
+  // IconBrandGithub,
+  // IconBrandDiscord,
   IconBrandLinkedin,
   IconBrandTwitter,
   IconBrandYoutube,
@@ -114,16 +114,16 @@ const FooterMenu = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 640px)' })
 
   const socialLinks = [
-    {
-      title: 'GitHub',
-      icon: <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: '#',
-    },
-    {
-      title: 'Discord',
-      icon: <IconBrandDiscord className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: '#',
-    },
+    // {
+    //   title: 'GitHub',
+    //   icon: <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+    //   href: '#',
+    // },
+    // {
+    //   title: 'Discord',
+    //   icon: <IconBrandDiscord className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+    //   href: '#',
+    // },
     {
       title: 'LinkedIn',
       icon: <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />,

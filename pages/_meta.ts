@@ -32,6 +32,7 @@ export default {
   blog: {
     title: 'Blog',
     type: 'page',
+    display: 'hidden',
     theme: {
       layout: 'full',
     },
@@ -40,6 +41,68 @@ export default {
   contact_us: {
     title: 'Liên hệ',
     type: 'page',
+    theme: {
+      timestamp: false,
+    },
+  },
+
+  privacy: {
+    title: 'Privacy Policy',
+    type: 'page',
+    display: 'hidden',
+    theme: {
+      timestamp: false,
+    },
+  },
+
+  d2c: {
+    title: 'Privacy Policy',
+    type: 'page',
+    display: 'hidden',
+    theme: {
+      timestamp: false,
+    },
+  },
+
+  sale_tracking: {
+    title: 'Privacy Policy',
+    type: 'page',
+    display: 'hidden',
+    theme: {
+      timestamp: false,
+    },
+  },
+
+  tos: {
+    title: 'Privacy Policy',
+    type: 'page',
+    display: 'hidden',
+    theme: {
+      timestamp: false,
+    },
+  },
+
+  cookie: {
+    title: 'Privacy Policy',
+    type: 'page',
+    display: 'hidden',
+    theme: {
+      timestamp: false,
+    },
+  },
+  unsubscribe: {
+    title: 'Privacy Policy',
+    type: 'page',
+    display: 'hidden',
+    theme: {
+      timestamp: false,
+    },
+  },
+
+  subscribe: {
+    title: 'Privacy Policy',
+    type: 'page',
+    display: 'hidden',
     theme: {
       timestamp: false,
     },
