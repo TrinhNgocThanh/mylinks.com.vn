@@ -135,8 +135,8 @@ export default function Features() {
     <HomeSection>
       <Header
         title="Mở khóa tiềm năng"
-        description="Tiềm năng sẵn có trong mọi doanh nghiệp đó là khách hàng hiện hữu của họ. Khai thác tiềm năng này với giải pháp giữ chân khách hàng ViVi của chúng tôi."
-        button={{ href: '/docs', text: 'Xem chi tiết' }}
+        description="Tiềm năng sẵn có trong mọi doanh nghiệp đó là tệp khách hàng hiện hữu. Hãy khai thác tiềm năng này, với giải pháp Giữ chân khách hàng ViVi của chúng tôi."
+        button={{ href: '#', text: 'Xem chi tiết' }}
       />
       <BentoGrid>
         {features.map((feature) => (
