@@ -523,17 +523,17 @@ const faqs = [
   {
     question: 'Dịch vụ AI Key Mylinks là gì?',
     answer:
-      'Dịch vụ AI Key Mylinks là một công cụ mạnh mẽ được thiết kế để cung cấp cho quản trị viên khả năng kiểm soát và quản lý toàn diện đối với phiên bản MyLinks của họ. Nó cho phép bạn cấu hình vai trò, quản lý người dùng, truy cập phân tích nâng cao và nhiều hơn nữa.',
+      'Dịch vụ AI Key Mylinks là hệ thống cung cấp các Models API Key AI chính thức từ các từ nhiều công ty AI nổi tiếng thế giới như OpenAI, Gemini, Claude... giúp bạn tối ưu chi phí và tiếp cận mọi mô hình AI tiên tiến.',
   },
   {
-    question: 'Làm thế nào để tôi có thể truy cập Bảng điều khiển quản trị?',
+    question: 'Tôi có thể làm gì với AI API Key của MyLinks cung cấp?',
     answer:
-      'Để truy cập Dịch vụ AI Key Mylinks , bạn sẽ cần đăng ký gói trả phí bao gồm tính năng này. Sau khi đăng ký, bạn sẽ nhận được thông tin đăng nhập và hướng dẫn về cách truy cập và sử dụng Bảng điều khiển quản trị.',
+      'Bạn có thể sử dụng API Key chúng tôi cung cấp để sử dụng cho nhiều mục đích khách nhau như các công cụ AI Chat, RAG, hay các ứng dụng AI Agent cho nhu cầu cá nhân hoặc doanh nghiệp với chi phí tối ưu nhất.',
   },
   {
-    question: 'Những tính năng nào có sẵn trong Bảng điều khiển quản trị?',
+    question: 'Tôi có thể tạo nhiều KEY cho cho các mục đích khác nhau?',
     answer:
-      'Dịch vụ AI Key Mylinks cung cấp các tính năng như kiểm soát truy cập dựa trên vai trò, cấu hình dự án, quản lý người dùng với dữ liệu thời gian thực, phân tích, tích hợp với các công cụ bên ngoài và nhiều hơn nữa. Nó là một công cụ toàn diện để quản lý môi trường MyLinks của bạn một cách hiệu quả.',
+      'Bạn có thể tạo nhiều khoá AI Key của mình và phân phối chúng đến nhân viên của bạn nhưng chúng sẽ được trừ vào tài khoản của bạn tương ứng với số Tokens bạn phân phát.',
   },
   {
     question: 'Dịch vụ AI Key Mylinks có được bao gồm trong gói miễn phí không?',
