@@ -1,0 +1,69 @@
+---
+title: Sale Tracking là
+description: 'Biến dữ liệu thành giá trị'
+---
+
+import LCLogo from '/components/lcLogo'
+import Carousel from '/components/carousel/Carousel'
+import Github from '@/components/icons/github'
+import Discord from '@/components/icons/discord'
+import { Mail } from 'lucide-react'
+import Image from 'next/image'
+
+# Sale Tracking là gì?
+
+Là một doanh nghiệp sản xuất hàng hoá dành cho người tiêu dùng, bán hàng qua kênh phân phối, liệu bạn có biết chính xác:  
+Khách hàng của mình ở đâu?  
+Tần suất mua hàng như thế nào?  
+Mùa nào nhiều, mùa nào ít?  
+
+Doanh nghiệp của bạn có nhận được những góp ý trực tiếp từ khách hàng về sản phẩm không?  
+Bạn có thể tiếp thị hoặc truyền tải thông tin về cải tiến sản phẩm trực tiếp đến khách hàng?  
+Khách hàng có mua lặp lại hoặc mua các sản phẩm khác của doanh nghiệp bạn cung cấp?  
+
+## Sale Tracking – Giải pháp thu thập dữ liệu bán hàng  
+
+Sale Tracking là giải pháp giúp doanh nghiệp sản xuất thu thập dữ liệu bán hàng mà không phụ thuộc vào kênh bán.  
+
+---
+
+## Lợi ích cho doanh nghiệp  
+
+### Thu thập dữ liệu dễ dàng  
+Giải pháp giúp doanh nghiệp có được dữ liệu khách hàng một cách dễ dàng và chính xác. Qua đó, doanh nghiệp có thể hoạch định hiệu quả hơn kế hoạch sản xuất và phân phối.  
+
+### Tiếp thị trực tiếp khách hàng  
+Cung cấp cho doanh nghiệp kênh tiếp thị hiệu quả với chi phí thấp. Giúp tiết kiệm ngân sách cho các chiến dịch truyền thông, quảng bá sản phẩm và thương hiệu.  
+
+### Hiểu chân dung khách hàng  
+Giúp doanh nghiệp hiểu rõ hơn về khách hàng mục tiêu, tăng khả năng gắn kết thương hiệu và nâng cao hiệu quả chăm sóc khách hàng.  
+
+---
+
+## Quy trình triển khai tích hợp  
+
+Ứng dụng của chúng tôi giúp doanh nghiệp triển khai thu thập dữ liệu bán hàng hiệu quả và hơn thế nữa.  
+
+### Dịch vụ của chúng tôi  
+Tư vấn triển khai và xây dựng chính sách giúp doanh nghiệp tận dụng lợi thế sẵn có.  
+Tiết kiệm thời gian và chi phí trong quá trình triển khai.  
+
+---
+
+## Các ứng dụng tương tự có thể khai thác ý tưởng này  
+Tem chống giả hàng hoá  
+Phiếu bảo hành điện tử  
+Máy bán hàng tự động  
+
+### Tích hợp & đồng bộ dữ liệu  
+Tích hợp dữ liệu nhanh chóng, dễ dàng, thời gian thực với các hệ thống hiện có của doanh nghiệp.  
+Cung cấp phần mềm CRM++ để hỗ trợ quản lý dữ liệu hiệu quả.  
+
+### Tuỳ biến & nâng cấp  
+Tuỳ biến và nâng cấp theo nhu cầu dữ liệu mong muốn.  
+Cung cấp phiên bản hoạt động độc lập cho hệ thống của doanh nghiệp.  
+
+---
+
+## Bắt đầu triển khai làm giàu dữ liệu của bạn
+Bạn cần tư vấn? Hãy liên hệ với chúng tôi ngay hôm nay!
