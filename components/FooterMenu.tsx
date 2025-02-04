@@ -44,6 +44,10 @@ const menuItems: {
         href: 'https://next.mylinks.com.vn/',
       },
       {
+        name: 'ChatBoxAI',
+        href: 'https://chatboxai.app/',
+      },
+      {
         name: 'AI Chrome Extension',
         href: '#',
       },
