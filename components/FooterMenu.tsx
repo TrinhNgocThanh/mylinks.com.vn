@@ -73,13 +73,14 @@ const menuItems: {
   {
     heading: 'Blog & AI',
     items: [
-      { name: 'Blog', href: '/blog' },
+      // { name: 'Blog', href: '/blog' },
       { name: 'ChatGPT', href: 'https://chatgpt.com/' },
       { name: 'lLama /Meta AI', href: 'https://www.meta.ai/' },
       { name: 'Gemini', href: 'https://gemini.google.com/' },
       { name: 'Claude', href: 'https://claude.ai/' },
       { name: 'xAI', href: 'https://x.com/i/grok/' },
       { name: 'Thư viện Prompt', href: 'https://prompts.chat/' },
+      { name: 'Free ChatGPT', href: 'https://heck.ai/' },
     ],
   },
   {
@@ -104,7 +105,7 @@ const menuItems: {
       },
       {
         name: 'Chính sách bảo mật',
-        href: '/privacy',
+        href: '/privacy_ext',
       },
       {
         name: 'Chính sách cookie',
