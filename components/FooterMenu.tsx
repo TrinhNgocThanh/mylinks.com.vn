@@ -105,7 +105,7 @@ const menuItems: {
       },
       {
         name: 'Chính sách bảo mật',
-        href: '/privacy_ext',
+        href: '/privacy',
       },
       {
         name: 'Chính sách cookie',
